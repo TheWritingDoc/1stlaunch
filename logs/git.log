@@ -31,3 +31,84 @@ Already up to date.
 [2025-11-13T05:39:28][INFO] git checkout -b feature/workflow-sanity
 
 [2025-11-13T05:40:20][INFO] git add -A
+
+[2025-11-13T05:40:42][INFO] git commit -m docs(security): add security policy
+
+[2025-11-13T05:40:42][ERROR] error: pathspec 'add' did not match any file(s) known to git
+error: pathspec 'security' did not match any file(s) known to git
+error: pathspec 'policy' did not match any file(s) known to git
+[2025-11-13T05:42:18][INFO] git commit -F C:\Users\MSICYB~1\AppData\Local\Temp\commit-message.txt
+
+[2025-11-13T05:42:18][ERROR] The argument 'scripts/hooks/PreCommit.ps1' is not recognized as the name of a script file. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+Usage: pwsh[.exe] [-Login] [[-File] <filePath> [args]]
+                  [-Command { - | <script-block> [-args <arg-array>]
+                                | <string> [<CommandParameters>] } ]
+                  [-CommandWithArgs <string> [<CommandParameters>]
+                  [-ConfigurationName <string>] [-ConfigurationFile <filePath>]
+                  [-CustomPipeName <string>] [-EncodedCommand <Base64EncodedCommand>]
+                  [-ExecutionPolicy <ExecutionPolicy>] [-InputFormat {Text | XML}]
+                  [-Interactive] [-MTA] [-NoExit] [-NoLogo] [-NonInteractive] [-NoProfile]
+                  [-NoProfileLoadTime] [-OutputFormat {Text | XML}] 
+                  [-SettingsFile <filePath>] [-SSHServerMode] [-STA] 
+                  [-Version] [-WindowStyle <style>] 
+                  [-WorkingDirectory <directoryPath>]
+
+       pwsh[.exe] -h | -Help | -? | /?
+
+PowerShell Online Help https://aka.ms/powershell-docs
+
+All parameters are case-insensitive.
+The argument 'scripts/hooks/PreCommit.ps1' to the -File parameter does not exist. Provide the path to an existing '.ps1' file as an argument to the -File parameter.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+[2025-11-13T05:44:34][INFO] git commit -F C:\Users\MSICYB~1\AppData\Local\Temp\commit-message.txt
+
+[2025-11-13T05:44:36][ERROR] [33;1mWARNING: The names of some imported commands from the module 'GitOps' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.[0m
+[31;1mException: [31;1mConfig not found: C:\c\Users\MSI_CYBORG\PRECISION_CODE\Precision Code Website\Website Update\repo\config\hooks.json[0m
+WARNING: The names of some imported commands from the module 'GitOps' include unapproved verbs that might make them less discoverable. 
+To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved 
+verbs, type Get-Verb.
+Config not found: C:\c\Users\MSI_CYBORG\PRECISION_CODE\Precision Code Website\Website Update\repo\config\hooks.json
+At C:\c\Users\MSI_CYBORG\PRECISION_CODE\Precision Code Website\Website Update\scripts\lib\GitOps.psm1:36 char:33
++   if (-not (Test-Path $Path)) { throw "Config not found: $Path" }
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Config not foun...nfig\hooks.json:String) [], RuntimeException
+    + FullyQualifiedErrorId : Config not found: C:\c\Users\MSI_CYBORG\PRECISION_CODE\Precision Code Website\Website Update\repo\config\ 
+   hooks.json
+[2025-11-13T05:53:09][INFO] git commit -F C:\Users\MSICYB~1\AppData\Local\Temp\commit-message.txt
+[2025-11-13T05:53:10][INFO] git diff --cached --name-only
+SECURITY.md
+logs/git.log
+logs/workflow.log
+[feature/workflow-sanity 38bd192] docs(security): add security policy
+ 3 files changed, 42 insertions(+)
+ create mode 100644 SECURITY.md
+ create mode 100644 logs/git.log
+ create mode 100644 logs/workflow.log
+[2025-11-13T05:54:12][INFO] git checkout feature/workflow-sanity
+M	logs/git.log
+M	logs/workflow.log
+[2025-11-13T05:54:12][INFO] git push -u origin feature/workflow-sanity
+[2025-11-13T05:54:33][INFO] git status --porcelain
+M logs/git.log
+ M logs/workflow.log
+[2025-11-13T05:54:35][INFO] git status --porcelain
+M logs/git.log
+ M logs/workflow.log
+[33;1mWARNING: The names of some imported commands from the module 'GitOps' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.[0m
+[2025-11-13T05:54:33][INFO] git status --porcelain
+WARNING: The names of some imported commands from the module 'GitOps' include unapproved verbs that might make them less discoverable. 
+To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved 
+verbs, type Get-Verb.
+[2025-11-13T05:54:35][INFO] git status --porcelain
+[2025-11-13T05:54:35][ERROR] [31;1mWrite-Error: [31;1mWorking tree not clean; commit or stash changes before push.[0m
+C:\c\Users\MSI_CYBORG\PRECISION_CODE\Precision Code Website\Website Update\scripts\hooks\PrePush.ps1 : Working tree not clean; commit 
+or stash changes before push.
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,PrePush.ps1
+ 
+error: failed to push some refs to 'https://github.com/TheWritingDoc/1stlaunch.git'
+[2025-11-13T05:54:43][INFO] git add -A
