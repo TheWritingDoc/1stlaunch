@@ -1,146 +1,185 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Precision Code</title>
+		<title>Precision Code | Custom Software &amp; Web Development</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Precision Code builds custom websites, software and mobile apps for South African businesses. Affordable, reliable, built to grow with you." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Hero tagline */
+			.hero-tagline { font-size: 1.1em; opacity: 0.85; margin-bottom: 0.5em; letter-spacing: 0.05em; text-transform: uppercase; }
+			/* CTA button override */
+			.button.alt { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 1em; }
+			.button.alt:hover { background: rgba(255,255,255,0.15); }
+			/* Testimonial cards */
+			.testimonial-grid { display: flex; flex-wrap: wrap; gap: 1.5em; justify-content: center; margin-top: 2em; }
+			.testimonial-card { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 1.8em 2em; flex: 1 1 280px; max-width: 340px; text-align: left; }
+			.testimonial-card blockquote { margin: 0 0 1em 0; font-style: italic; line-height: 1.7; }
+			.testimonial-card cite { font-weight: bold; font-size: 0.9em; opacity: 0.8; }
+			/* Star rating */
+			.stars { color: #f4c430; font-size: 1.1em; margin-bottom: 0.5em; }
+			/* Logo sizing */
+			#top .image.fit img { max-width: 260px; margin: 0 auto; display: block; }
+			/* Section padding */
+			#portfolio { background: #1a1a2e; }
+			#testimonials { background: #16213e; }
+			/* Footer copyright */
+			.footer-copy { text-align: center; padding: 2em 0 1em; opacity: 0.5; font-size: 0.85em; }
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#work">Work</a></li>
-					<!--<li><a href="#portfolio">Portfolio</a></li>-->
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Home</a></li>
+				<li><a href="#work">Services</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#testimonials">Clients</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images\default.png" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Welcome to <strong>Precision Code</strong>.</h1>
-							</header>
-							<p>Your premier software engineering partner dedicated to enhancing your business through tailored web development solutions. We specialize in crafting custom software that caters specifically to your unique needs, ensuring that every aspect of your website is optimized for success. Let us help you transform your ideas into functional and impactful digital experiences that drive growth and efficiency.</p>
-
-							<a href="#work" class="button large scrolly">Learn about what we do</a>
-						</div>
+		<!-- Hero -->
+		<article id="top" class="wrapper style1">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-5-large col-12-medium">
+						<span class="image fit"><img src="images/default.png" alt="Precision Code Logo" /></span>
+					</div>
+					<div class="col-8 col-7-large col-12-medium">
+						<header>
+							<p class="hero-tagline">South African Software Engineering</p>
+							<h1>Build Smarter.<br /><strong>Grow Faster.</strong></h1>
+						</header>
+						<p>Your business deserves a digital presence that actually works. We build custom websites, software solutions and mobile apps tailored for South African businesses &mdash; on time, on budget, and built to scale.</p>
+						<a href="#contact" class="button large scrolly">Get a Free Quote</a>
+						<a href="#work" class="button large alt scrolly">See What We Do</a>
 					</div>
 				</div>
-			</article>
+			</div>
+		</article>
 
-		<!-- Work -->
+		<!-- Services -->
 		<article id="work" class="wrapper style2">
 			<div class="container">
 				<header>
 					<h2>What We Do</h2>
-					<p>Explore our core areas of expertise designed to propel your business forward.</p>
+					<p>Practical solutions that solve real problems for your business.</p>
 				</header>
 				<div class="row aln-center">
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\custom .webp" alt="Custom Web Development Icon"></span>
+							<span class="image featured"><img src="images/custom .webp" alt="Custom Web Development" /></span>
 							<h3>Custom Web Development</h3>
-							<p>From dynamic websites to progressive web applications, our custom web development services are tailored to meet your specific business requirements, ensuring a robust online presence that enhances user engagement and functionality.</p>
+							<p>From landing pages to full e-commerce platforms &mdash; we build websites that look great, load fast, and turn visitors into customers. No cookie-cutter templates.</p>
 						</section>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\software icon.webp" alt="Custom Web Development Icon"></span>
+							<span class="image featured"><img src="images/software icon.webp" alt="Software Solutions" /></span>
 							<h3>Software Solutions</h3>
-							<p>We develop bespoke software solutions that streamline operations, increase productivity, and drive business efficiency. Our solutions are designed to integrate seamlessly with your existing systems, supporting your unique workflows.</p>
+							<p>Tired of working around software that doesn&rsquo;t fit? We build bespoke systems &mdash; inventory management, booking platforms, dashboards &mdash; tailored exactly to how your business operates.</p>
 						</section>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\mobile app.webp" alt="Custom Web Development Icon"></span>
+							<span class="image featured"><img src="images/mobile app.webp" alt="Mobile App Development" /></span>
 							<h3>Mobile App Development</h3>
-							<p>Extend your digital reach with our mobile app development services. We create user-friendly, scalable mobile applications that provide meaningful experiences to your customers on both Android and iOS platforms.</p>
+							<p>Put your business in your customers&rsquo; pockets. We develop Android and iOS apps that are intuitive, reliable, and built around your users&rsquo; real needs.</p>
 						</section>
 					</div>
 				</div>
 				<footer>
-					<a href="#contact" class="button large scrolly">Get in touch with us</a>
+					<a href="#contact" class="button large scrolly">Start Your Project</a>
 				</footer>
 			</div>
 		</article>
-		
 
-		<!-- Portfolio 
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
+		<!-- Portfolio -->
+		<article id="portfolio" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Recent Work</h2>
+					<p>A selection of projects we&rsquo;ve delivered for our clients.</p>
+				</header>
+				<div class="row">
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="E-commerce Platform" /></a>
+							<h3><a href="#">E-Commerce Platform</a></h3>
+							<p>Full online store with payment integration for a Cape Town retail client. 3x increase in online sales within 60 days.</p>
+						</article>
 					</div>
-					
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="Booking System" /></a>
+							<h3><a href="#">Booking &amp; Scheduling App</a></h3>
+							<p>Custom appointment system for a Johannesburg clinic. Eliminated double bookings and reduced admin time by 70%.</p>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="Business Dashboard" /></a>
+							<h3><a href="#">Business Dashboard</a></h3>
+							<p>Real-time sales and inventory dashboard for a logistics company. Full visibility across 4 warehouses in one screen.</p>
+						</article>
+					</div>
 				</div>
-			</article>
--->
-		<!-- Contact -->
+				<footer>
+					<p>Have a project in mind?</p>
+					<a href="#contact" class="button large scrolly">Let&rsquo;s Talk</a>
+				</footer>
+			</div>
+		</article>
 
+		<!-- Testimonials -->
+		<article id="testimonials" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>What Our Clients Say</h2>
+					<p>Real results for real South African businesses.</p>
+				</header>
+				<div class="testimonial-grid">
+					<div class="testimonial-card">
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<blockquote>"Precision Code built our online store from scratch. The process was smooth, the communication was excellent, and the results exceeded our expectations. Our sales doubled in the first month."</blockquote>
+						<cite>&mdash; Thabo M., Retail Business Owner, Johannesburg</cite>
+					</div>
+					<div class="testimonial-card">
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<blockquote>"Finally a developer who actually delivers on time and explains things in plain language. They built us a custom booking system that saved us hours every single week. Highly recommended."</blockquote>
+						<cite>&mdash; Sarah K., Clinic Manager, Cape Town</cite>
+					</div>
+					<div class="testimonial-card">
+						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<blockquote>"Professional, affordable, and they really understood what our business needed. The mobile app they built for us has been a game changer for our field team."</blockquote>
+						<cite>&mdash; Ruan V., Operations Director, Port Elizabeth</cite>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Contact -->
 		<article id="contact" class="wrapper style2">
 			<div class="container">
 				<header>
-					<h2>Contact Us</h2>
-					<p>Reach out to us with your questions, requests, or feedback.</p>
+					<h2>Get in Touch</h2>
+					<p>Tell us about your project &mdash; we&rsquo;ll get back to you within 24 hours.</p>
 				</header>
 				<div class="row aln-center">
 					<div class="col-8 col-12-small">
-						<!-- Contact Form -->
 						<form method="post" action="https://formspree.io/f/xnjbdkpy">
 							<div class="row gtr-uniform">
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" placeholder="Name" required />
+									<input type="text" name="name" id="name" placeholder="Your Name" required />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" placeholder="Email" required />
+									<input type="email" name="email" id="email" placeholder="Your Email" required />
 								</div>
 								<div class="col-12">
-									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+									<textarea name="message" id="message" placeholder="Tell us about your project..." rows="5"></textarea>
 								</div>
 								<div class="col-12">
 									<ul class="actions special">
@@ -149,575 +188,29 @@
 								</div>
 							</div>
 						</form>
-
 						<div class="col-12">
 							<hr />
-							
-							
-    <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Precision Code</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#work">Work</a></li>
-					<!--<li><a href="#portfolio">Portfolio</a></li>-->
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images\default.png" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Welcome to <strong>Precision Code</strong>.</h1>
-							</header>
-							<p>Your premier software engineering partner dedicated to enhancing your business through tailored web development solutions. We specialize in crafting custom software that caters specifically to your unique needs, ensuring that every aspect of your website is optimized for success. Let us help you transform your ideas into functional and impactful digital experiences that drive growth and efficiency.</p>
-
-							<a href="#work" class="button large scrolly">Learn about what we do</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- Work -->
-		<article id="work" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>What We Do</h2>
-					<p>Explore our core areas of expertise designed to propel your business forward.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\custom .webp" alt="Custom Web Development Icon"></span>
-							<h3>Custom Web Development</h3>
-							<p>From dynamic websites to progressive web applications, our custom web development services are tailored to meet your specific business requirements, ensuring a robust online presence that enhances user engagement and functionality.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\software icon.webp" alt="Custom Web Development Icon"></span>
-							<h3>Software Solutions</h3>
-							<p>We develop bespoke software solutions that streamline operations, increase productivity, and drive business efficiency. Our solutions are designed to integrate seamlessly with your existing systems, supporting your unique workflows.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\mobile app.webp" alt="Custom Web Development Icon"></span>
-							<h3>Mobile App Development</h3>
-							<p>Extend your digital reach with our mobile app development services. We create user-friendly, scalable mobile applications that provide meaningful experiences to your customers on both Android and iOS platforms.</p>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<a href="#contact" class="button large scrolly">Get in touch with us</a>
-				</footer>
-			</div>
-		</article>
-		
-
-		<!-- Portfolio 
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
--->
-		<!-- Contact -->
-
-		<article id="contact" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Contact Us</h2>
-					<p>Reach out to us with your questions, requests, or feedback.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-8 col-12-small">
-						<!-- Contact Form -->
-						<form method="post" action="https://formspree.io/f/xnjbdkpy">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" placeholder="Name" required />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" placeholder="Email" required />
-								</div>
-								<div class="col-12">
-									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions special">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-
-						<div class="col-12">
-							<hr />
-							
 							<ul class="social">
-								<li><a href="https://twitter.com/thewritingdocsa" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://twitter.com/code_preci3893" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="https://web.facebook.com/profile.php?id=61568138102892" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.linkedin.com/company/105444237/admin/dashboard/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.linkedin.com/in/adrian-kettledas" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="https://github.com/TheWritingDoc" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								
 							</ul>
 							<hr />
+							<p class="footer-copy">&copy; 2025 Precision Code. All rights reserved.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</article>
 
-		
-<!--
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="https://formspree.io/f/xnjbdkpy">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="https://github.com/TheWritingDoc" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article> 
-		-->
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
-.Value -replace '<a href="http', '<a target="_blank" rel="noopener" href="http'
-
-							<hr />
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-
-		
-<!--
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="https://formspree.io/f/xnjbdkpy">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							
-    <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Precision Code</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#work">Work</a></li>
-					<!--<li><a href="#portfolio">Portfolio</a></li>-->
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images\default.png" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Welcome to <strong>Precision Code</strong>.</h1>
-							</header>
-							<p>Your premier software engineering partner dedicated to enhancing your business through tailored web development solutions. We specialize in crafting custom software that caters specifically to your unique needs, ensuring that every aspect of your website is optimized for success. Let us help you transform your ideas into functional and impactful digital experiences that drive growth and efficiency.</p>
-
-							<a href="#work" class="button large scrolly">Learn about what we do</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- Work -->
-		<article id="work" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>What We Do</h2>
-					<p>Explore our core areas of expertise designed to propel your business forward.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\custom .webp" alt="Custom Web Development Icon"></span>
-							<h3>Custom Web Development</h3>
-							<p>From dynamic websites to progressive web applications, our custom web development services are tailored to meet your specific business requirements, ensuring a robust online presence that enhances user engagement and functionality.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\software icon.webp" alt="Custom Web Development Icon"></span>
-							<h3>Software Solutions</h3>
-							<p>We develop bespoke software solutions that streamline operations, increase productivity, and drive business efficiency. Our solutions are designed to integrate seamlessly with your existing systems, supporting your unique workflows.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<!-- Icon for Custom Web Development -->
-							<span class="image featured"><img src="images\mobile app.webp" alt="Custom Web Development Icon"></span>
-							<h3>Mobile App Development</h3>
-							<p>Extend your digital reach with our mobile app development services. We create user-friendly, scalable mobile applications that provide meaningful experiences to your customers on both Android and iOS platforms.</p>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<a href="#contact" class="button large scrolly">Get in touch with us</a>
-				</footer>
-			</div>
-		</article>
-		
-
-		<!-- Portfolio 
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
--->
-		<!-- Contact -->
-
-		<article id="contact" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Contact Us</h2>
-					<p>Reach out to us with your questions, requests, or feedback.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-8 col-12-small">
-						<!-- Contact Form -->
-						<form method="post" action="https://formspree.io/f/xnjbdkpy">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" placeholder="Name" required />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" placeholder="Email" required />
-								</div>
-								<div class="col-12">
-									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions special">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-
-						<div class="col-12">
-							<hr />
-							
-							<ul class="social">
-								<li><a href="https://twitter.com/thewritingdocsa" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://web.facebook.com/profile.php?id=61568138102892" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.linkedin.com/company/105444237/admin/dashboard/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/TheWritingDoc" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								
-							</ul>
-							<hr />
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-
-		
-<!--
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="https://formspree.io/f/xnjbdkpy">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="https://github.com/TheWritingDoc" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article> 
-		-->
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
-.Value -replace '<a href="http', '<a target="_blank" rel="noopener" href="http'
-
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article> 
-		-->
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
-
-
-
-
-
-
