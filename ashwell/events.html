@@ -1,0 +1,426 @@
+<!doctype html><html lang='en'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Events - NBPAM Service Centre</title><link rel='stylesheet' href='styles.css'></head>
+<body>
+<header class='site-header'>
+<div class='container header-flex'>
+  <div class='logo-title'>
+    <img src='assets/logo_1.png' alt='NBPAM Logo' class='logo'>
+    <div><h1>NBPAM Service Centre for Elderlies</h1>
+    <p class='sub'>Multipurpose Centre & Hope & Healing Safe House</p></div>
+  </div>
+  <a class='btn btn-secondary header-cta' href='get-involved.html'>Donate / Support</a>
+</div>
+</header>
+
+
+<main class='container'>
+    <div class='quick-access-bar fade-in'>
+      <a href='index.html' class='btn btn-sm btn-secondary'>Home</a>
+      <a href='get-involved.html' class='btn btn-sm btn-secondary'>Get Involved</a>
+      <a href='events.html' class='btn btn-sm btn-secondary'>Events</a>
+      <a href='contact.html' class='btn btn-sm btn-secondary'>Contact Us</a>
+    </div>
+
+    <!-- Featured Event Hero -->
+    <section class='featured-event-hero fade-in hover-lift'>
+      <span class='chip' style='background:var(--accent); color:white; margin-bottom:16px'>Featured Event</span>
+      <h1 class='hero-title' style='margin-bottom:8px' id='hero-title'>Loading...</h1>
+      <p class='hero-sub' style='opacity:0.9' id='hero-desc'>...</p>
+      
+      <div class='countdown-grid' id='countdown-grid'>
+        <div class='countdown-item'>
+          <span class='countdown-val' id='cd-days'>00</span>
+          <span class='countdown-label'>Days</span>
+        </div>
+        <div class='countdown-item'>
+          <span class='countdown-val' id='cd-hours'>00</span>
+          <span class='countdown-label'>Hours</span>
+        </div>
+        <div class='countdown-item'>
+          <span class='countdown-val' id='cd-mins'>00</span>
+          <span class='countdown-label'>Mins</span>
+        </div>
+        <div class='countdown-item'>
+          <span class='countdown-val' id='cd-secs'>00</span>
+          <span class='countdown-label'>Secs</span>
+        </div>
+      </div>
+      
+      <div style='margin-top:32px'>
+        <button class='btn btn-outline' onclick="document.getElementById('rsvp-modal').style.display='flex'">RSVP Now</button>
+      </div>
+    </section>
+
+    <div class='two-col'>
+      <!-- Upcoming Events List -->
+      <section class='card modern-section fade-in hover-lift' style='height:100%'>
+        <h2 class='section-title heading-animate'>Upcoming Events</h2>
+        <div class='section-body' id='events-list'>
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- Calendar & Inquire -->
+      <div style='display:flex; flex-direction:column; gap:20px'>
+        <section class='card'>
+          <h2 class='section-title heading-animate' style='font-size:1.5rem'>Calendar</h2>
+          <div class='calendar'>
+            <div class='calendar-header'>
+              <div style='display:flex;justify-content:space-between;align-items:center;gap:8px'>
+                <button id='prev-month' class='btn btn-sm btn-outline' style='color:var(--text); border-color:#ccc'>&lt;</button>
+                <h3 id='cal-month' class='cal-title' style='margin:0; font-size:1.1rem'></h3>
+                <button id='next-month' class='btn btn-sm btn-outline' style='color:var(--text); border-color:#ccc'>&gt;</button>
+              </div>
+              <div class='weekday-row'>
+                <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+              </div>
+            </div>
+            <div class='calendar-grid' id='calendar-grid' aria-label='Calendar grid'></div>
+          </div>
+        </section>
+
+        <section class='card' style='background:linear-gradient(135deg, var(--accent), #e67e22); color:white'>
+          <h3 style='margin-top:0; font-size:1.5rem'>Host an Event?</h3>
+          <p style='color:rgba(255,255,255,0.9)'>Partner with us to host a community event or fundraiser.</p>
+          <a href='contact.html?subject=Host an Event' class='btn' style='background:white; color:var(--accent); width:100%'>Contact Us</a>
+        </section>
+      </div>
+    </div>
+    
+    <!-- Simple RSVP Modal -->
+    <div id='rsvp-modal' class='lightbox'>
+      <div class='card' style='max-width:500px; width:90%; position:relative'>
+        <button class='lightbox-close' onclick="document.getElementById('rsvp-modal').style.display='none'">×</button>
+        <h3 style='margin-top:0'>RSVP for Event</h3>
+        <form id="rsvp-form">
+          <div class='form-group'>
+            <label class='form-label'>Event</label>
+            <select id="rsvp-event" class='form-input'>
+              <option>Health Awareness Day (Nov 20)</option>
+              <option>Christmas Lunch (Dec 25)</option>
+              <option>Volunteer Orientation (Jan 15)</option>
+            </select>
+          </div>
+          <div class='form-group'>
+            <label class='form-label'>Your Name</label>
+            <input type='text' id="rsvp-name" class='form-input' required>
+          </div>
+          <div class='form-group'>
+            <label class='form-label'>Email / Phone</label>
+            <input type='text' id="rsvp-contact" class='form-input' required>
+          </div>
+          <div class='form-group'>
+            <label class='form-label'>Number of Guests</label>
+            <input type='number' id="rsvp-guests" class='form-input' min='1' value='1'>
+          </div>
+          <button type='submit' class='btn' style='width:100%'>Confirm RSVP</button>
+          <p id="rsvp-status" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sponsors & Donors -->
+    <section class="card modern-section reveal-up enhanced-sponsor-section" style="margin-top:48px">
+      <div class="sponsors-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+        <div>
+           <h2 class="section-title heading-animate" style="margin-bottom:8px">Our Partners & Donors</h2>
+           <p style="margin:0; opacity:0.8">Proudly supported by community leaders.</p>
+        </div>
+        <a href="contact.html?subject=Partner" class="btn btn-sm btn-outline" style="color:var(--primary); border-color:var(--primary);">Become a Partner</a>
+      </div>
+      
+      <div class="logo-loop-container">
+        <div class="logo-loop-track">
+          <!-- Original Set -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" loading="lazy">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" loading="lazy">
+          <!-- Duplicated Set for Seamless Loop -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" aria-hidden="true">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    </main>
+<footer class='site-footer'>
+  <div class='footer-grid'>
+    <div class='footer-col'>
+      <h4>About NBPAM</h4>
+      <p>Restoring dignity and improving quality of life for older persons in Kouga & Sarah Baartman District.</p>
+    </div>
+    <div class='footer-col'>
+      <h4>Quick Links</h4>
+      <ul class='footer-links'>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='get-involved.html'>Get Involved</a></li>
+        <li><a href='events.html'>Events</a></li>
+        <li><a href='contact.html'>Contact Us</a></li>
+      </ul>
+    </div>
+    <div class='footer-col'>
+      <h4>Contact</h4>
+      <ul class='footer-links'>
+        <li><a href='tel:+27123456789'>+27 12 345 6789</a></li>
+        <li><a href='mailto:info@nbpam.org.za'>info@nbpam.org.za</a></li>
+        <li>Jeffreys Bay, Eastern Cape</li>
+      </ul>
+    </div>
+  </div>
+  <div class='footer-bottom'>
+    <div class='container'>
+      <p>&copy; 2025 NBPAM Service Centre for Elderlies — NPO: 278-105</p>
+    </div>
+  </div>
+</footer>
+<script src="ui.js"></script>
+<script src="splash-cursor.js"></script>
+<script>
+    (function(){
+      // Events Data
+      const events = [
+        { date: '2025-11-20', name: 'Health Awareness Day', time: '09:00 AM', loc: 'Community Hall', desc: 'Free blood pressure checks and health advice for seniors.' },
+        { date: '2025-12-25', name: 'Christmas Lunch', time: '12:00 PM', loc: 'NBPAM Centre', desc: 'Annual festive celebration for our elderly members.' },
+        { date: '2026-01-15', name: 'Volunteer Orientation', time: '10:00 AM', loc: 'Main Office', desc: 'Workshop for new volunteers interested in joining our team.' },
+      ];
+
+      // Sort by date
+      events.sort((a,b) => new Date(a.date) - new Date(b.date));
+
+      const now = new Date();
+      
+      // Render Events List
+      const listEl = document.getElementById('events-list');
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+      events.forEach(e => {
+        const d = new Date(e.date);
+        const day = d.getDate();
+        const month = monthNames[d.getMonth()];
+        const isPast = d < now && d.toDateString() !== now.toDateString(); // Keep today as active
+
+        const card = document.createElement('div');
+        card.className = 'event-card';
+        if (isPast) {
+            card.style.opacity = '0.6';
+            card.style.filter = 'grayscale(0.8)';
+        }
+
+        card.innerHTML = `
+            <div class='event-date-badge' style='${isPast ? 'background:#ccc' : ''}'>
+              <span class='event-date-day'>${day}</span>
+              <span class='event-date-month'>${month}</span>
+            </div>
+            <div class='event-details'>
+              <div class='event-title'>${e.name} ${isPast ? '(Ended)' : ''}</div>
+              <div class='event-meta'>
+                <span>🕒 ${e.time}</span>
+                <span>📍 ${e.loc}</span>
+              </div>
+              <p style='margin:0; font-size:0.9rem'>${e.desc}</p>
+            </div>
+        `;
+        listEl.appendChild(card);
+      });
+
+      // Find Next Event for Countdown
+      // We assume event time is roughly 9AM if we just parse the date string (which is UTC midnight usually)
+      // To be precise, let's append the time string for parsing or just assume 9AM for the countdown target
+      
+      const nextEvent = events.find(e => {
+         // Create a comparable date object. '2025-11-20' + 'T09:00:00'
+         // We'll approximate the time parsing
+         let timePart = '09:00:00'; // default
+         if(e.time.includes('12:00 PM')) timePart = '12:00:00';
+         if(e.time.includes('10:00 AM')) timePart = '10:00:00';
+         
+         const target = new Date(`${e.date}T${timePart}`);
+         return target > now;
+      });
+
+      let targetDate;
+      if (nextEvent) {
+         let timePart = '09:00:00'; 
+         if(nextEvent.time.includes('12:00 PM')) timePart = '12:00:00';
+         if(nextEvent.time.includes('10:00 AM')) timePart = '10:00:00';
+         targetDate = new Date(`${nextEvent.date}T${timePart}`);
+
+         // Update Hero
+         document.getElementById('hero-title').textContent = nextEvent.name;
+         document.getElementById('hero-desc').textContent = nextEvent.desc;
+      } else {
+         document.getElementById('hero-title').textContent = "No Upcoming Events";
+         document.getElementById('hero-desc').textContent = "Check back later for more updates.";
+         document.getElementById('countdown-grid').style.display = 'none';
+      }
+
+      // Countdown Logic
+      function updateCountdown(){
+        if (!targetDate) return;
+        
+        const current = new Date();
+        const diff = targetDate - current;
+        
+        if (diff <= 0) {
+          // Zero out
+           document.getElementById('cd-days').textContent = '00';
+           document.getElementById('cd-hours').textContent = '00';
+           document.getElementById('cd-mins').textContent = '00';
+           document.getElementById('cd-secs').textContent = '00';
+          return;
+        }
+        
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('cd-days').textContent = d.toString().padStart(2, '0');
+        document.getElementById('cd-hours').textContent = h.toString().padStart(2, '0');
+        document.getElementById('cd-mins').textContent = m.toString().padStart(2, '0');
+        document.getElementById('cd-secs').textContent = s.toString().padStart(2, '0');
+      }
+      
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      // Calendar Logic
+      const state = { ref: new Date() };
+      const prevBtn = document.getElementById('prev-month');
+      const nextBtn = document.getElementById('next-month');
+      
+      function renderCalendar(refDate, events){
+        const year = refDate.getFullYear();
+        const month = refDate.getMonth();
+        const first = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month+1, 0).getDate();
+        const startWeekday = first.getDay(); // 0=Sun
+        const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        document.getElementById('cal-month').textContent = `${monthNames[month]} ${year}`;
+
+        const grid = document.getElementById('calendar-grid');
+        grid.innerHTML = '';
+        for (let i=0;i<startWeekday;i++) {
+          const pad = document.createElement('div');
+          pad.className = 'calendar-cell empty';
+          pad.style.background = 'transparent';
+          pad.style.border = 'none';
+          grid.appendChild(pad);
+        }
+
+        const eventsByDay = new Map();
+        events.forEach(e => {
+          const d = new Date(e.date);
+          if (d.getFullYear()===year && d.getMonth()===month) {
+            eventsByDay.set(d.getDate(), e.name);
+          }
+        });
+
+        for (let day=1; day<=daysInMonth; day++){
+          const cell = document.createElement('div');
+          const isEvent = eventsByDay.has(day);
+          cell.className = 'calendar-cell' + (isEvent ? ' event' : '');
+          // Minify cell for small calendar
+          cell.style.minHeight = '40px';
+          
+          const num = document.createElement('div');
+          num.className = 'day-num';
+          num.textContent = day;
+          cell.appendChild(num);
+          
+          if (isEvent){
+            // Dot indicator instead of full text for small calendar
+            const dot = document.createElement('div');
+            dot.style.width = '6px';
+            dot.style.height = '6px';
+            dot.style.background = 'var(--accent)';
+            dot.style.borderRadius = '50%';
+            dot.style.marginTop = '4px';
+            cell.appendChild(dot);
+            cell.title = eventsByDay.get(day); // Tooltip
+          }
+          grid.appendChild(cell);
+        }
+      }
+
+      renderCalendar(state.ref, events);
+
+      prevBtn.addEventListener('click', () => {
+        const d = new Date(state.ref);
+        d.setMonth(d.getMonth() - 1);
+        state.ref = d;
+        renderCalendar(state.ref, events);
+      });
+      nextBtn.addEventListener('click', () => {
+        const d = new Date(state.ref);
+        d.setMonth(d.getMonth() + 1);
+        state.ref = d;
+        renderCalendar(state.ref, events);
+      });
+
+    })();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+       console.log('Attaching RSVP listener');
+       const rsvpForm = document.getElementById('rsvp-form');
+       if (!rsvpForm) { console.error('RSVP Form not found'); return; }
+       
+       rsvpForm.addEventListener('submit', async (e) => {
+         e.preventDefault();
+         console.log('RSVP Submit triggered');
+         const statusEl = document.getElementById('rsvp-status');
+         const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+         
+         const eventName = document.getElementById('rsvp-event').value;
+         const name = document.getElementById('rsvp-name').value;
+         const contact = document.getElementById('rsvp-contact').value;
+         const guests = document.getElementById('rsvp-guests').value;
+         
+         statusEl.textContent = 'Sending RSVP...';
+         statusEl.className = 'form-status info';
+         submitBtn.disabled = true;
+ 
+         try {
+           const res = await fetch('http://localhost:8787/api/send', {
+             method: 'POST',
+             headers: { 'Content-Type': 'application/json' },
+             body: JSON.stringify({
+               name: name,
+               email: contact.includes('@') ? contact : 'no-email@provided.com',
+               subject: `RSVP: ${eventName}`,
+               message: `New RSVP Request.\n\nEvent: ${eventName}\nGuest Name: ${name}\nContact Info: ${contact}\nNumber of Guests: ${guests}\n\nPlease confirm availability with the guest.`
+             })
+           });
+           
+           const data = await res.json();
+           if (res.ok && data.ok) {
+             statusEl.textContent = 'RSVP Sent! We look forward to seeing you.';
+             statusEl.className = 'form-status success';
+             setTimeout(() => {
+                 document.getElementById('rsvp-modal').style.display = 'none';
+                 rsvpForm.reset();
+                 statusEl.textContent = '';
+                 submitBtn.disabled = false;
+             }, 2000);
+           } else {
+             throw new Error(data.message || 'Failed to send');
+           }
+         } catch (err) {
+           console.error(err);
+           statusEl.textContent = 'Error sending RSVP. Please try again.';
+           statusEl.className = 'form-status error';
+           submitBtn.disabled = false;
+         }
+       });
+    });
+   </script>
+ </body></html>

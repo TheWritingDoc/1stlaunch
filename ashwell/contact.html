@@ -1,0 +1,194 @@
+<!doctype html><html lang='en'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NBPAM Service Centre</title><link rel='stylesheet' href='styles.css'></head>
+<body>
+<header class='site-header'>
+<div class='container header-flex'>
+  <div class='logo-title'>
+    <img src='assets/logo_1.png' alt='NBPAM Logo' class='logo'>
+    <div><h1>NBPAM Service Centre for Elderlies</h1>
+    <p class='sub'>Multipurpose Centre & Hope & Healing Safe House</p></div>
+  </div>
+</div>
+</header>
+
+
+<main class='container'>
+    <div class='quick-access-bar fade-in'>
+      <a href='index.html' class='btn btn-sm btn-secondary'>Home</a>
+      <a href='get-involved.html' class='btn btn-sm btn-secondary'>Get Involved</a>
+      <a href='events.html' class='btn btn-sm btn-secondary'>Events</a>
+      <a href='contact.html' class='btn btn-sm btn-secondary'>Contact Us</a>
+    </div>
+    <section class='card modern-section fade-in hover-lift'>
+      <h2 class='section-title heading-animate'>Contact Us</h2>
+      <div class='section-body'>
+        <p>NBPAM Service Centre for Elderlies</p>
+        <p>267 Booyce Street, Arcadia, Humansdorp, 6300</p>
+        <p>Email: nbpam.humie@gmail.com | Tel: 072 208 4230</p>
+        <section id='email-section'>
+          <form id='email-form' novalidate>
+            <input type='text' name='hp_website' id='hp_website' autocomplete='off' tabindex='-1' aria-hidden='true' style='position:absolute;left:-9999px;height:0;width:0;padding:0;border:0;'>
+            <p><label>Name: <input type='text' name='name' id='name' required></label></p>
+            <p><label>Email: <input type='email' name='email' id='email' required></label></p>
+            <p><label>Subject: <input type='text' name='subject' id='subject' required></label></p>
+            <p><label>Message:<br><textarea name='message' id='message' rows='5' required></textarea></label></p>
+            <p><button type='submit' id='submit-btn'>Send Message</button></p>
+            <p id='form-status' class='form-status' role='alert' aria-live='polite'></p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <!-- Sponsors & Donors -->
+    <section class="card modern-section reveal-up enhanced-sponsor-section" style="margin-top:48px">
+      <div class="sponsors-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+        <div>
+           <h2 class="section-title heading-animate" style="margin-bottom:8px">Our Partners & Donors</h2>
+           <p style="margin:0; opacity:0.8">Proudly supported by community leaders.</p>
+        </div>
+        <a href="contact.html" class="btn btn-sm btn-outline" style="color:var(--primary); border-color:var(--primary);">Become a Partner</a>
+      </div>
+      
+      <div class="logo-loop-container">
+        <div class="logo-loop-track">
+          <!-- Original Set -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" loading="lazy">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" loading="lazy">
+          <!-- Duplicated Set for Seamless Loop -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" aria-hidden="true">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+    </main>
+<footer class='site-footer'>
+  <div class='footer-grid'>
+    <div class='footer-col'>
+      <h4>About NBPAM</h4>
+      <p>Restoring dignity and improving quality of life for older persons in Kouga & Sarah Baartman District.</p>
+    </div>
+    <div class='footer-col'>
+      <h4>Quick Links</h4>
+      <ul class='footer-links'>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='get-involved.html'>Get Involved</a></li>
+        <li><a href='events.html'>Events</a></li>
+        <li><a href='contact.html'>Contact Us</a></li>
+      </ul>
+    </div>
+    <div class='footer-col'>
+      <h4>Contact</h4>
+      <ul class='footer-links'>
+        <li><a href='tel:+27123456789'>+27 12 345 6789</a></li>
+        <li><a href='mailto:info@nbpam.org.za'>info@nbpam.org.za</a></li>
+        <li>Jeffreys Bay, Eastern Cape</li>
+      </ul>
+    </div>
+  </div>
+  <div class='footer-bottom'>
+    <div class='container'>
+      <p>&copy; 2025 NBPAM Service Centre for Elderlies — NPO: 278-105</p>
+    </div>
+  </div>
+</footer>
+<script src="ui.js"></script>
+<script src="splash-cursor.js"></script>
+<script>
+    (function(){
+      const form = document.getElementById('email-form');
+      const statusEl = document.getElementById('form-status');
+      const submitBtn = document.getElementById('submit-btn');
+
+      // Auto-fill subject from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const subjectParam = urlParams.get('subject');
+      if (subjectParam) {
+        document.getElementById('subject').value = subjectParam;
+      }
+
+      let formStart = Date.now();
+
+      function showStatus(msg, type){
+        statusEl.textContent = msg;
+        statusEl.className = 'form-status ' + (type || '');
+      }
+
+      function isValidEmail(email){
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        showStatus('', '');
+
+        // Honeypot check
+        if (document.getElementById('hp_website').value) {
+          showStatus('Submission blocked: suspected spam.', 'error');
+          return;
+        }
+
+        // Basic throttle: require at least 3 seconds between load and submit
+        if (Date.now() - formStart < 3000) {
+          showStatus('Please take a moment to complete the form.', 'error');
+          return;
+        }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Client-side validations
+        if (!name || name.length < 2) {
+          showStatus('Please enter your name (at least 2 characters).', 'error');
+          return;
+        }
+        if (!isValidEmail(email)) {
+          showStatus('Please enter a valid email address.', 'error');
+          return;
+        }
+        if (!subject || subject.length < 3) {
+          showStatus('Please enter a subject (at least 3 characters).', 'error');
+          return;
+        }
+        if (!message || message.length < 10) {
+          showStatus('Please provide a longer message (at least 10 characters).', 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        showStatus('Sending...', 'info');
+
+        try {
+          const res = await fetch('http://localhost:8787/api/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, subject, message, formStarted: formStart })
+          });
+          const data = await res.json().catch(()=>({ ok:false, message:'Invalid server response' }));
+          if (res.ok && data.ok) {
+            showStatus('Thank you for reaching out to NBPAM. Your message was sent successfully — we appreciate your support and will respond shortly.', 'success');
+            form.reset();
+            formStart = Date.now();
+          } else {
+            const msg = (data && data.message) ? data.message : 'Failed to send. Please try again later.';
+            showStatus(msg, 'error');
+          }
+        } catch (err) {
+          showStatus('Network error. Please check your connection and try again.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+</body></html>

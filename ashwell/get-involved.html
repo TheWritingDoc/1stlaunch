@@ -1,0 +1,263 @@
+<!doctype html><html lang='en'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NBPAM Service Centre</title><link rel='stylesheet' href='styles.css'></head>
+<body>
+<header class='site-header'>
+<div class='container header-flex'>
+  <div class='logo-title'>
+    <img src='assets/logo_1.png' alt='NBPAM Logo' class='logo'>
+    <div><h1>NBPAM Service Centre for Elderlies</h1>
+    <p class='sub'>Multipurpose Centre & Hope & Healing Safe House</p></div>
+  </div>
+  <a class='btn btn-secondary header-cta' href='get-involved.html'>Donate / Support</a>
+</div>
+</header>
+
+
+<main class='container'>
+    <div class='quick-access-bar fade-in'>
+      <a href='index.html' class='btn btn-sm btn-secondary'>Home</a>
+      <a href='get-involved.html' class='btn btn-sm btn-secondary'>Get Involved</a>
+      <a href='events.html' class='btn btn-sm btn-secondary'>Events</a>
+      <a href='contact.html' class='btn btn-sm btn-secondary'>Contact Us</a>
+    </div>
+    <section class='card hero-small' style='background: linear-gradient(135deg, rgba(44,138,74,0.1), rgba(243,156,18,0.1)); padding: 40px; border-radius: 24px; text-align: center; margin-bottom: 32px;'>
+      <h1 class='hero-title' style='color: var(--primary-dark); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px;'>Make a Difference Today</h1>
+      <p class='hero-sub' style='color: var(--text); max-width: 700px; margin: 0 auto; font-size: 1.1rem; opacity: 1;'>Your support empowers us to restore dignity and provide care to the elderly in our community.</p>
+    </section>
+
+    <section class='card modern-section fade-in hover-lift'>
+      <h2 class='section-title heading-animate'>Ways to Help</h2>
+      <div class='section-body'>
+        <div class='grid-3'>
+          <a class='link-card service-card' href='contact.html?subject=Volunteer' aria-label='Volunteer with NBPAM' style='text-align: center; align-items: center; padding: 32px;'>
+            <div class='card-icon' style='font-size: 3rem; margin-bottom: 1rem; background: rgba(44,138,74,0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%;'>🤝</div>
+            <div class='link-card-title' style='font-size: 1.5rem; margin-bottom: 12px;'>Volunteer</div>
+            <div class='link-card-desc'>Join our team of dedicated caregivers and support staff.</div>
+            <div class='volunteer-roles'>
+              <span class='role-chip'>Caregivers</span>
+              <span class='role-chip'>Drivers</span>
+              <span class='role-chip'>Cooks</span>
+              <span class='role-chip'>Nurses</span>
+            </div>
+          </a>
+          <a class='link-card service-card' href='contact.html?subject=Partner' aria-label='Partner with NBPAM' style='text-align: center; align-items: center; padding: 32px;'>
+             <div class='card-icon' style='font-size: 3rem; margin-bottom: 1rem; background: rgba(243,156,18,0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%;'>🏢</div>
+            <div class='link-card-title' style='font-size: 1.5rem; margin-bottom: 12px;'>Partner</div>
+            <div class='link-card-desc'>Collaborate with us to build sustainable community programs.</div>
+          </a>
+          <a class='link-card service-card' href='#donate' aria-label='Donate to NBPAM' style='text-align: center; align-items: center; padding: 32px;'>
+             <div class='card-icon' style='font-size: 3rem; margin-bottom: 1rem; background: rgba(222, 56, 49, 0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%;'>💝</div>
+            <div class='link-card-title' style='font-size: 1.5rem; margin-bottom: 12px;'>Donate</div>
+            <div class='link-card-desc'>Financial contributions directly support meals and medical care.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id='donate' class='card donation-card reveal-up'>
+      <h2 class='section-title heading-animate' style='color:white !important'>Donate</h2>
+      <p style='font-size: 1.2rem; opacity: 0.9; color: white; margin-bottom: 32px;'>Your generous contribution makes our work possible.</p>
+      
+      <div class='two-col' style='gap: 32px; text-align: left;'>
+        
+        <!-- Column 1: Banking -->
+        <div class='donation-info' style='width:100%'>
+            <h3 style='color:white; margin-top:0;'>Monetary Donations</h3>
+            <div class='bank-details' style='margin-top:16px'>
+              <h3 style='margin:0 0 8px 0; font-size: 2rem; color: white;'>Standard Bank</h3>
+              <p style='opacity: 0.9; font-size: 1.1rem; margin-bottom: 16px; color: white;'>NBPAM Service Centre</p>
+              
+              <p class='account-number' id='accNum'>10185587974</p>
+              
+              <button class='copy-btn' onclick='copyToClipboard()'>
+                <span>📋</span> Copy Account Number
+              </button>
+              
+              <div class='bank-grid'>
+                <div class='bank-item'>
+                  <div class='bank-label'>Branch Code</div>
+                  <div class='bank-value'>051001</div>
+                </div>
+                <div class='bank-item'>
+                  <div class='bank-label'>Account Type</div>
+                  <div class='bank-value'>Cheque / Current</div>
+                </div>
+                <div class='bank-item'>
+                  <div class='bank-label'>Reference</div>
+                  <div class='bank-value'>Your Name / NBPAM</div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Goods -->
+        <div class='goods-donation'>
+           <h3 style='color:white; margin-top:0;'>Donation Suggestions</h3>
+           <p style='color:white; opacity:0.9'>We welcome non-monetary contributions to support our daily operations and care packages.</p>
+           
+           <div style='background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border-radius: 24px; padding: 24px; border: 1px solid rgba(255,255,255,0.3); margin-top: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);'>
+               <div style='display:flex; gap:16px; margin-bottom:20px; align-items:center'>
+                  <div style='font-size:2rem; background:rgba(255,255,255,0.2); width:50px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0;'>🥫</div>
+                  <div>
+                    <strong style='font-size:1.1rem; display:block'>Non-Perishable Food</strong>
+                    <span style='opacity:0.8; font-size:0.9rem'>Canned goods, rice, maize meal, tea, coffee, sugar, cooking oil</span>
+                  </div>
+               </div>
+
+               <div style='display:flex; gap:16px; margin-bottom:20px; align-items:center'>
+                  <div style='font-size:2rem; background:rgba(255,255,255,0.2); width:50px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0;'>👕</div>
+                  <div>
+                    <strong style='font-size:1.1rem; display:block'>Clothing & Bedding</strong>
+                    <span style='opacity:0.8; font-size:0.9rem'>Clean clothes, warm blankets, linen, shoes (all sizes)</span>
+                  </div>
+               </div>
+
+               <div style='display:flex; gap:16px; margin-bottom:20px; align-items:center'>
+                  <div style='font-size:2rem; background:rgba(255,255,255,0.2); width:50px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0;'>♿</div>
+                  <div>
+                    <strong style='font-size:1.1rem; display:block'>Medical Equipment</strong>
+                    <span style='opacity:0.8; font-size:0.9rem'>Wheelchairs, walkers, adult diapers, first aid supplies</span>
+                  </div>
+               </div>
+
+               <div style='display:flex; gap:16px; margin-bottom:20px; align-items:center'>
+                  <div style='font-size:2rem; background:rgba(255,255,255,0.2); width:50px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0;'>🧼</div>
+                  <div>
+                    <strong style='font-size:1.1rem; display:block'>Toiletries</strong>
+                    <span style='opacity:0.8; font-size:0.9rem'>Soap, toothpaste, lotion, sanitizers, toilet paper</span>
+                  </div>
+               </div>
+               
+               <div style='text-align:center; margin-top:24px'>
+                 <a href='contact.html?subject=Donation Drop-off' class='btn' style='background: white; color: var(--primary); width:100%'>Arrange Drop-off</a>
+               </div>
+           </div>
+        </div>
+
+      </div>
+
+      <div class='impact-breakdown' style='margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2)'>
+        <div class='impact-item' data-tooltip='R50 provides a hot meal'>
+          <div class='impact-circle'>🍲</div>
+          <span class='impact-label'>Meals</span>
+        </div>
+        <div class='impact-item' data-tooltip='Support clinic visits'>
+          <div class='impact-circle'>💊</div>
+          <span class='impact-label'>Medicine</span>
+        </div>
+        <div class='impact-item' data-tooltip='Fuel for outreach'>
+          <div class='impact-circle'>🚐</div>
+          <span class='impact-label'>Transport</span>
+        </div>
+        <div class='impact-item' data-tooltip='Safe house maintenance'>
+          <div class='impact-circle'>🏠</div>
+          <span class='impact-label'>Shelter</span>
+        </div>
+      </div>
+      <script>
+        function copyToClipboard() {
+          const accNum = document.getElementById('accNum').innerText;
+          navigator.clipboard.writeText(accNum).then(() => {
+            const btn = document.querySelector('.copy-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>✅</span> Copied!';
+            btn.style.background = 'white';
+            btn.style.color = '#2c8a4a';
+            setTimeout(() => {
+              btn.innerHTML = originalText;
+              btn.style.background = '';
+              btn.style.color = '';
+            }, 2000);
+          });
+        }
+      </script>
+    </section>
+
+    <section class='card modern-section fade-in' style='border-left: 4px solid var(--primary);'>
+      <h2 class='section-title heading-animate'>Quick Connect</h2>
+      <div class='section-body'>
+        <p>Want to get involved but not sure how? Leave your details and we'll contact you.</p>
+        <form onsubmit='event.preventDefault(); alert("Thank you! We will contact you shortly.");'>
+          <div class='form-grid'>
+            <div class='form-group'>
+              <label class='form-label'>Name</label>
+              <input type='text' class='form-input' placeholder='John Doe' required>
+            </div>
+            <div class='form-group'>
+              <label class='form-label'>Phone Number</label>
+              <input type='tel' class='form-input' placeholder='012 345 6789' required>
+            </div>
+          </div>
+          <div class='form-group'>
+            <label class='form-label'>How would you like to help?</label>
+            <textarea class='form-textarea' placeholder='I am interested in volunteering as a driver...'></textarea>
+          </div>
+          <button type='submit' class='btn'>Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sponsors & Donors -->
+    <section class="card modern-section reveal-up enhanced-sponsor-section" style="margin-top:48px">
+      <div class="sponsors-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+        <div>
+           <h2 class="section-title heading-animate" style="margin-bottom:8px">Our Partners & Donors</h2>
+           <p style="margin:0; opacity:0.8">Proudly supported by community leaders.</p>
+        </div>
+        <a href="contact.html?subject=Partner" class="btn btn-sm btn-outline" style="color:var(--primary); border-color:var(--primary);">Become a Partner</a>
+      </div>
+      
+      <div class="logo-loop-container">
+        <div class="logo-loop-track">
+          <!-- Original Set -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" loading="lazy">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" loading="lazy">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" loading="lazy">
+          <!-- Duplicated Set for Seamless Loop -->
+          <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" aria-hidden="true">
+          <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" aria-hidden="true">
+          <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+    </main>
+<footer class='site-footer'>
+  <div class='footer-grid'>
+    <div class='footer-col'>
+      <h4>About NBPAM</h4>
+      <p>Restoring dignity and improving quality of life for older persons in Kouga & Sarah Baartman District.</p>
+    </div>
+    <div class='footer-col'>
+      <h4>Quick Links</h4>
+      <ul class='footer-links'>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='get-involved.html'>Get Involved</a></li>
+        <li><a href='events.html'>Events</a></li>
+        <li><a href='contact.html'>Contact Us</a></li>
+      </ul>
+    </div>
+    <div class='footer-col'>
+      <h4>Contact</h4>
+      <ul class='footer-links'>
+        <li><a href='tel:+27123456789'>+27 12 345 6789</a></li>
+        <li><a href='mailto:info@nbpam.org.za'>info@nbpam.org.za</a></li>
+        <li>Jeffreys Bay, Eastern Cape</li>
+      </ul>
+    </div>
+  </div>
+  <div class='footer-bottom'>
+    <div class='container'>
+      <p>&copy; 2025 NBPAM Service Centre for Elderlies — NPO: 278-105</p>
+    </div>
+  </div>
+</footer>
+<script src="ui.js"></script>
+<script src="splash-cursor.js"></script>
+</body></html>

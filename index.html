@@ -65,19 +65,29 @@
 				}
 				/* Hero buttons stack */
 				#top .button.alt { margin-left: 0; margin-top: 0.75em; }
-				/* Portfolio images fix */
-				.box .image.featured {
-					position: static !important;
-					left: auto !important;
-					top: auto !important;
-					margin: 0 0 1em 0 !important;
-					width: 100% !important;
-				}
-				.box .image.featured img {
-					width: 100%;
-					height: auto;
-					display: block;
-				}
+			/* Portfolio images fix */
+			.box .image.featured {
+				position: static !important;
+				left: auto !important;
+				top: auto !important;
+				margin: 0 0 1em 0 !important;
+				width: 100% !important;
+			}
+			.box .image.featured img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			/* Ensure portfolio images are clickable on mobile */
+			#portfolio .box .image.featured a {
+				display: block;
+				width: 100%;
+			}
+			#portfolio .box .image.featured a img {
+				border-radius: 6px;
+				max-height: 220px;
+				object-fit: cover;
+			}
 				/* Testimonials stack */
 				.testimonial-grid { flex-direction: column; align-items: center; }
 				.testimonial-card { max-width: 100%; width: 100%; }

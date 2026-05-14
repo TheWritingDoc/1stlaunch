@@ -1,0 +1,258 @@
+<!doctype html><html lang='en'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NBPAM Service Centre</title><link rel='stylesheet' href='styles.css'></head>
+<body>
+<header class='site-header'>
+<div class='container header-flex'>
+  <div class='logo-title'>
+    <button class='menu-toggle' aria-label='Toggle navigation'>☰</button>
+    <img src='assets/logo_1.png' alt='NBPAM Logo' class='logo' decoding='async'>
+    <div><h1>NBPAM Service Centre</h1>
+    <p class='sub'>Hope & Healing Safe House</p></div>
+  </div>
+  <a class='btn btn-secondary header-cta btn-pulse' href='get-involved.html'>Donate / Support</a>
+</div>
+</header>
+
+
+<main class='container'>
+  <div class='quick-access-bar fade-in'>
+    <a href='index.html' class='btn btn-sm btn-secondary'>Home</a>
+    <a href='get-involved.html' class='btn btn-sm btn-secondary'>Get Involved</a>
+    <a href='events.html' class='btn btn-sm btn-secondary'>Events</a>
+    <a href='contact.html' class='btn btn-sm btn-secondary'>Contact Us</a>
+  </div>
+  <section class='card hero photo-hero fade-in'>
+    <div class='hero-slideshow' aria-hidden='true'>
+      <img src='assets/HOME/IMG-20251217-WA0001.jpg' alt='' class='slide active' loading='eager' decoding='async'>
+      <img src='assets/HOME/IMG-20251217-WA0005.jpg' alt='' class='slide' loading='lazy' decoding='async'>
+      <img src='assets/HOME/IMG-20251217-WA0007.jpg' alt='' class='slide' loading='lazy' decoding='async'>
+      <img src='assets/HOME/IMG-20251217-WA0025.jpg' alt='' class='slide' loading='lazy' decoding='async'>
+      <img src='assets/HOME/group_photo.png' alt='' class='slide' loading='lazy' decoding='async'>
+    </div>
+    <div class='hero-content'>
+      <div class='hero-top'>
+        <h1 class='hero-title'>Welcome to NBPAM</h1>
+        <p class='hero-sub'>NBPAM (Nation Builders Prophetic Apostolic Movement) provides care, support and a safe haven for elderly persons in the Kouga & Sarah Baartman District. Established in 2018, our mission is to restore dignity and improve quality of life for older persons through community-based services.</p>
+      </div>
+      <div class='hero-bottom'>
+        <div class='chips'>
+          <span class='chip'>Care & dignity</span>
+          <span class='chip'>Community-based services</span>
+          <span class='chip'>Safe house support</span>
+        </div>
+        <div class='hero-actions' role='group' aria-label='Primary actions'>
+          <a class='btn' href='get-involved.html'>Get Involved</a>
+          <a class='btn btn-outline' href='contact.html'>Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      const hero=document.querySelector('.photo-hero');
+      const slides=[...document.querySelectorAll('.hero-slideshow .slide')];
+      if(!hero||slides.length===0)return;
+      let i=0,paused=false,timer;
+      function show(n){slides[i].classList.remove('active');i=(n+slides.length)%slides.length;slides[i].classList.add('active');}
+      function next(){show(i+1)}
+      function start(){timer=setInterval(next,5000)}
+      function stop(){clearInterval(timer)}
+      start();
+      hero.addEventListener('click',e=>{if(e.button===0)next()});
+      hero.addEventListener('mousedown',e=>{if(e.button===0){paused=true;stop()}});
+      hero.addEventListener('mouseup',()=>{if(paused){paused=false;start()}});
+      hero.addEventListener('mouseleave',()=>{if(paused){paused=false;start()}});
+      document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start()});
+    })();
+  </script>
+  <section class='card stats-bar reveal-up' aria-label='Key highlights'>
+    <div class='stats-grid'>
+      <div class='stat'>
+        <div class='stat-icon'>📅</div>
+        <div class='stat-title'>Established</div>
+        <div class='stat-value'>2018</div>
+      </div>
+      <div class='stat'>
+        <div class='stat-icon'>🆔</div>
+        <div class='stat-title'>NPO Number</div>
+        <div class='stat-value'>278-105</div>
+      </div>
+      <div class='stat'>
+        <div class='stat-icon'>📍</div>
+        <div class='stat-title'>Service Area</div>
+        <div class='stat-value'>Kouga & Sarah Baartman</div>
+      </div>
+    </div>
+  </section>
+  <section class='card quick-links reveal-up stagger-1'>
+    <h2 class='section-title heading-animate'>Quick Links</h2>
+    <div class='section-body grid-3'>
+      <a class='link-card' href='get-involved.html' aria-label='Get Involved'>
+        <div class='link-card-img'><img src='assets/image_2.png' alt='' loading='lazy'></div>
+        <div class='link-card-content'>
+          <div class='link-card-title'>Get Involved</div>
+          <div class='link-card-desc'>Volunteer, partner or support our daily services.</div>
+        </div>
+      </a>
+      <a class='link-card' href='events.html' aria-label='Events'>
+        <div class='link-card-img'><img src='assets/image_1.png' alt='' loading='lazy'></div>
+        <div class='link-card-content'>
+          <div class='link-card-title'>Events</div>
+          <div class='link-card-desc'>See upcoming community activities and clinics.</div>
+        </div>
+      </a>
+      <a class='link-card' href='gallery.html' aria-label='Gallery'>
+        <div class='link-card-img'><img src='assets/HOME/group_photo.png' alt='' loading='lazy'></div>
+        <div class='link-card-content'>
+          <div class='link-card-title'>Gallery</div>
+          <div class='link-card-desc'>Photos from programs and Hope & Healing House.</div>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section id='services' class='card modern-section reveal-up stagger-2'>
+    <h2 class='section-title heading-animate'>Our Services</h2>
+    <div class='section-body two-col'>
+      <div class='service-card'>
+        <img src='assets/image_3.png' alt='Meals and Support' class='service-img' loading='lazy'>
+        <div class='service-content'>
+          <h3 class='heading-animate'>Multipurpose Centre for Elderlies</h3>
+          <ul>
+            <li>Active ageing programs and daily support services</li>
+            <li>Meals-on-wheels and nutrition programs</li>
+            <li>Transport to clinics and community events</li>
+            <li>Skills development and recreation</li>
+          </ul>
+        </div>
+      </div>
+      <div class='service-card'>
+        <img src='assets/image_5.png' alt='Hope and Healing House' class='service-img' loading='lazy'>
+        <div class='service-content'>
+          <h3 class='heading-animate'>Hope &amp; Healing Safe House</h3>
+          <ul>
+            <li>Daily caregiving and hosting</li>
+            <li>Health support and counseling</li>
+            <li>Protection and rehabilitation for victims of abuse</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='mission' class='card modern-section reveal-up stagger-3 mission-bg'>
+    <h2 class='section-title heading-animate'>Mission &amp; Vision</h2>
+    <div class='section-body'>
+      <p><strong>Mission:</strong> To provide professional care that restores dignity and promotes quality of life for older persons.</p>
+      <p><strong>Vision:</strong> To act transparently and effectively within South African law, building partnerships to support vulnerable seniors.</p>
+    </div>
+  </section>
+  
+  <section id='board' class='card modern-section reveal-up'>
+    <h2 class='section-title heading-animate'>Executive Board</h2>
+    <div class='section-body board-grid'>
+      <div class='board-card'>
+        <div class='board-avatar'>IM</div>
+        <div class='board-name'>Imelda Felix</div>
+        <div class='board-role'>Chairperson</div>
+      </div>
+      <div class='board-card'>
+        <div class='board-avatar'>CC</div>
+        <div class='board-name'>Chantelle Coetzee</div>
+        <div class='board-role'>Vice Chairperson</div>
+      </div>
+      <div class='board-card'>
+        <div class='board-avatar'>JP</div>
+        <div class='board-name'>June Potgieter</div>
+        <div class='board-role'>Treasurer</div>
+      </div>
+      <div class='board-card'>
+        <div class='board-avatar'>GR</div>
+        <div class='board-name'>Glenise Rossouw</div>
+        <div class='board-role'>Secretary</div>
+      </div>
+      <div class='board-card'>
+        <div class='board-avatar'>AG</div>
+        <div class='board-name'>Ashwell Goliath</div>
+        <div class='board-role'>Director &amp; Project Manager</div>
+      </div>
+      <div class='board-card'>
+        <div class='board-avatar'>PP</div>
+        <div class='board-name'>P. Potgieter</div>
+        <div class='board-role'>Professional Nurse</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sponsors & Donors - Infinite Loop -->
+  <section class="card modern-section reveal-up enhanced-sponsor-section">
+    <div class="sponsors-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+      <div>
+         <h2 class="section-title heading-animate" style="margin-bottom:8px">Our Partners & Donors</h2>
+         <p style="margin:0; opacity:0.8">Proudly supported by community leaders.</p>
+      </div>
+      <a href="contact.html?subject=Partner" class="btn btn-sm btn-outline" style="color:var(--primary); border-color:var(--primary);">Become a Partner</a>
+    </div>
+    
+    <div class="logo-loop-container">
+      <div class="logo-loop-track">
+        <!-- Original Set -->
+        <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" loading="lazy">
+        <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" loading="lazy">
+        <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" loading="lazy">
+        <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" loading="lazy">
+        <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" loading="lazy">
+        <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" loading="lazy">
+        <!-- Duplicated Set for Seamless Loop -->
+        <img src="ADS%20IMAGES/sponsor-platinum-400x200.png" alt="Sponsor Platinum" class="sponsor-logo" aria-hidden="true">
+        <img src="ADS%20IMAGES/sponsor-gold-350x175.png" alt="Sponsor Gold" class="sponsor-logo" aria-hidden="true">
+        <img src="ADS%20IMAGES/sponsor-silver-300x150.png" alt="Sponsor Silver" class="sponsor-logo" aria-hidden="true">
+        <img src="ADS%20IMAGES/donor-large-300x150.png" alt="Donor Large" class="sponsor-logo" aria-hidden="true">
+        <img src="ADS%20IMAGES/sponsor-bronze-250x125.png" alt="Sponsor Bronze" class="sponsor-logo" aria-hidden="true">
+        <img src="assets/sponsors/Precision%20Code.png" alt="Precision Code" class="sponsor-logo" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class='site-footer'>
+  <div class='footer-grid'>
+    <div class='footer-col'>
+      <h4>About NBPAM</h4>
+      <p>Restoring dignity and improving quality of life for older persons in Kouga & Sarah Baartman District.</p>
+    </div>
+    <div class='footer-col'>
+      <h4>Quick Links</h4>
+      <ul class='footer-links'>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='get-involved.html'>Get Involved</a></li>
+        <li><a href='events.html'>Events</a></li>
+        <li><a href='contact.html'>Contact Us</a></li>
+      </ul>
+    </div>
+    <div class='footer-col'>
+      <h4>Contact</h4>
+      <ul class='footer-links'>
+        <li><a href='tel:+27123456789'>+27 12 345 6789</a></li>
+        <li><a href='mailto:info@nbpam.org.za'>info@nbpam.org.za</a></li>
+        <li>Jeffreys Bay, Eastern Cape</li>
+      </ul>
+    </div>
+  </div>
+  <div class='footer-bottom'>
+    <div class='container'>
+      <p>&copy; 2025 NBPAM Service Centre for Elderlies — NPO: 278-105</p>
+    </div>
+  </div>
+</footer>
+<script src="ui.js"></script>
+<script src="splash-cursor.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then((reg) => console.log('Service Worker registered.', reg))
+        .catch((err) => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body></html>
