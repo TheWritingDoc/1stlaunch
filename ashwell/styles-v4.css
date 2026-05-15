@@ -2802,3 +2802,125 @@ a {
 button {
   border: 1px solid #111111 !important;
 }
+
+/* =========================================
+   GLOBAL READABILITY PASS (ALL PAGES)
+   ========================================= */
+
+html {
+  font-size: 16px;
+}
+
+body,
+p,
+li,
+label,
+input,
+textarea,
+select,
+button,
+.form-label,
+.form-status,
+.event-meta,
+.event-meta span,
+.link-card-desc,
+.hero-sub,
+.weekday-row span,
+.footer-links a {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer li,
+.site-footer a {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Make links clearly identifiable */
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.btn,
+.chip,
+.site-page-select,
+button {
+  text-decoration: none !important;
+}
+
+/* Improve readability over hero images while keeping black text */
+.photo-hero .hero-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.photo-hero .hero-title,
+.photo-hero .hero-sub {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+.photo-hero .chips .chip {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #9ca3af !important;
+  font-weight: 700;
+}
+
+/* Stronger section delineation */
+.card,
+.modern-section,
+.event-card,
+.service-card,
+.link-card,
+.stat,
+.calendar,
+.bank-details,
+.quick-links,
+.site-footer {
+  border-color: #9ca3af !important;
+}
+
+/* Calendar readability */
+.calendar-cell {
+  border: 1px solid #9ca3af !important;
+}
+
+.calendar-header h3,
+.cal-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+/* Gallery filter readability */
+#gallery-filters .chip {
+  font-size: 0.95rem !important;
+  padding: 8px 14px !important;
+}
+
+@media (max-width: 900px) {
+  body,
+  p,
+  li,
+  label,
+  input,
+  textarea,
+  select,
+  button,
+  .form-label,
+  .form-status,
+  .event-meta,
+  .event-meta span,
+  .link-card-desc,
+  .hero-sub,
+  .weekday-row span,
+  .footer-links a {
+    font-size: 0.98rem !important;
+  }
+}
