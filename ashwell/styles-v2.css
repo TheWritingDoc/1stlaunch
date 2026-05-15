@@ -2271,7 +2271,10 @@ p {
     font-size: 0.85rem;
   }
 
-  /* Header CTA button - hidden on mobile, moved to hero - cache-bust v2 */
+  /* Header CTA button - hidden on all screens, moved to hero */
+  .header-cta {
+    display: none !important;
+  }
   .header-cta {
     display: none !important;
   }
