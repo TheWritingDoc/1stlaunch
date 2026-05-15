@@ -2489,3 +2489,113 @@ p {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* =========================================
+   FINAL MOBILE READABILITY + CALENDAR FIXES
+   ========================================= */
+
+/* Ensure calendar day numbers stay readable in all themes */
+.calendar,
+.calendar * {
+  color: #1f2937;
+}
+
+.calendar {
+  background: #ffffff;
+}
+
+.calendar-cell {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.calendar-cell .day-num {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.calendar-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+/* Mobile-first readability baseline */
+@media (max-width: 900px) {
+  body,
+  p,
+  li,
+  .event-meta,
+  .event-meta span,
+  .weekday-row span,
+  .form-label,
+  .form-status,
+  .hero-sub,
+  .countdown-label {
+    font-size: 0.875rem !important;
+    line-height: 1.45;
+  }
+
+  .event-title,
+  .section-title,
+  h3 {
+    line-height: 1.3;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .card,
+  .modern-section,
+  .bank-details,
+  .event-card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .two-col {
+    gap: 14px;
+  }
+
+  .calendar {
+    padding: 10px;
+  }
+
+  .calendar-grid {
+    gap: 4px;
+  }
+
+  .calendar-cell {
+    min-height: 48px;
+    padding: 6px 4px;
+  }
+
+  .weekday-row span {
+    font-weight: 700;
+    padding: 4px 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card,
+  .modern-section,
+  .event-card {
+    padding: 12px;
+  }
+
+  .quick-access-bar {
+    margin-bottom: 12px;
+  }
+
+  .calendar-cell {
+    min-height: 46px;
+  }
+}

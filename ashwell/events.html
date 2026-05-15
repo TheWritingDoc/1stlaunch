@@ -331,8 +331,8 @@
           const cell = document.createElement('div');
           const isEvent = eventsByDay.has(day);
           cell.className = 'calendar-cell' + (isEvent ? ' event' : '');
-          // Minify cell for small calendar
-          cell.style.minHeight = '40px';
+          // Keep cells readable and touch-friendly on mobile
+          cell.style.minHeight = '48px';
           
           const num = document.createElement('div');
           num.className = 'day-num';
