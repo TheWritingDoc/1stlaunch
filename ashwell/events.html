@@ -28,8 +28,8 @@
     <!-- Featured Event Hero -->
     <section class='featured-event-hero fade-in hover-lift'>
       <span class='chip' style='background:var(--accent); color:white; margin-bottom:16px'>Featured Event</span>
-      <h1 class='hero-title' style='margin-bottom:8px' id='hero-title'>Loading...</h1>
-      <p class='hero-sub' style='opacity:0.9' id='hero-desc'>...</p>
+      <h1 class='hero-title' style='margin-bottom:8px' id='hero-title'>Upcoming Community Event</h1>
+      <p class='hero-sub' style='opacity:0.9' id='hero-desc'>Join us for our next NBPAM gathering and support programme.</p>
       
       <div class='countdown-grid' id='countdown-grid'>
         <div class='countdown-item'>
@@ -195,8 +195,13 @@
         { date: '2026-01-15', name: 'Volunteer Orientation', time: '10:00 AM', loc: 'Main Office', desc: 'Workshop for new volunteers interested in joining our team.' },
       ];
 
-      // Sort by date
-      events.sort((a,b) => new Date(a.date) - new Date(b.date));
+      function parseLocalDate(dateStr){
+        const [y,m,d] = dateStr.split('-').map(Number);
+        return new Date(y, m - 1, d);
+      }
+
+      // Sort by date (local-safe, avoids timezone month/day shifts)
+      events.sort((a,b) => parseLocalDate(a.date) - parseLocalDate(b.date));
 
       const now = new Date();
       
@@ -205,7 +210,7 @@
       const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
       events.forEach(e => {
-        const d = new Date(e.date);
+        const d = parseLocalDate(e.date);
         const day = d.getDate();
         const month = monthNames[d.getMonth()];
         const isPast = d < now && d.toDateString() !== now.toDateString(); // Keep today as active
@@ -245,7 +250,9 @@
          if(e.time.includes('12:00 PM')) timePart = '12:00:00';
          if(e.time.includes('10:00 AM')) timePart = '10:00:00';
          
-         const target = new Date(`${e.date}T${timePart}`);
+         const local = parseLocalDate(e.date);
+         const [hh, mm, ss] = timePart.split(':').map(Number);
+         const target = new Date(local.getFullYear(), local.getMonth(), local.getDate(), hh, mm, ss || 0);
          return target > now;
       });
 
@@ -254,7 +261,9 @@
          let timePart = '09:00:00'; 
          if(nextEvent.time.includes('12:00 PM')) timePart = '12:00:00';
          if(nextEvent.time.includes('10:00 AM')) timePart = '10:00:00';
-         targetDate = new Date(`${nextEvent.date}T${timePart}`);
+         const local = parseLocalDate(nextEvent.date);
+        const [hh, mm, ss] = timePart.split(':').map(Number);
+        targetDate = new Date(local.getFullYear(), local.getMonth(), local.getDate(), hh, mm, ss || 0);
 
          // Update Hero
          document.getElementById('hero-title').textContent = nextEvent.name;
@@ -321,7 +330,7 @@
 
         const eventsByDay = new Map();
         events.forEach(e => {
-          const d = new Date(e.date);
+          const d = parseLocalDate(e.date);
           if (d.getFullYear()===year && d.getMonth()===month) {
             eventsByDay.set(d.getDate(), e.name);
           }

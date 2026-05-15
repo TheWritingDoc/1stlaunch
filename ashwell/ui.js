@@ -1,5 +1,50 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
+  // Global dropdown navigation for all pages (always visible)
+  const quickBar = document.querySelector('.quick-access-bar');
+  if (quickBar) {
+    const links = [...quickBar.querySelectorAll('a[href]')].map(a => ({
+      href: a.getAttribute('href'),
+      text: a.textContent.trim()
+    }));
+
+    const navWrap = document.createElement('div');
+    navWrap.className = 'site-dropdown-nav';
+
+    const label = document.createElement('label');
+    label.className = 'dropdown-nav-label';
+    label.setAttribute('for', 'site-page-select');
+    label.textContent = 'Navigate';
+
+    const select = document.createElement('select');
+    select.id = 'site-page-select';
+    select.className = 'site-page-select';
+    select.setAttribute('aria-label', 'Navigate to page');
+
+    links.forEach(link => {
+      const option = document.createElement('option');
+      option.value = link.href;
+      option.textContent = link.text;
+      select.appendChild(option);
+    });
+
+    const current = (window.location.pathname.split('/').pop() || 'index.html');
+    const exact = [...select.options].find(o => o.value === current);
+    if (exact) select.value = current;
+
+    select.addEventListener('change', () => {
+      if (select.value) window.location.href = select.value;
+    });
+
+    navWrap.appendChild(label);
+    navWrap.appendChild(select);
+
+    const main = document.querySelector('main.container');
+    if (main) {
+      main.parentNode.insertBefore(navWrap, main);
+    }
+  }
+
   const menuToggle = document.querySelector('.menu-toggle');
   const navBar = document.querySelector('.nav-bar');
   if(menuToggle && navBar) {

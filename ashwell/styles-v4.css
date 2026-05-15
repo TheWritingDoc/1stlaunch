@@ -2599,3 +2599,89 @@ p {
     min-height: 46px;
   }
 }
+
+/* =========================================
+   LIGHT THEME + ALWAYS VISIBLE DROPDOWN NAV
+   ========================================= */
+
+body,
+.site-header,
+.card,
+.modern-section,
+.quick-links,
+.event-card,
+.calendar,
+.site-footer {
+  background-color: #ffffff !important;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0;
+  height: auto !important;
+  min-height: 72px;
+  padding: 10px 0 !important;
+  z-index: 1200;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  height: 56px !important;
+}
+
+.logo-title h1 {
+  font-size: clamp(1rem, 2.6vw, 1.4rem) !important;
+}
+
+.menu-toggle,
+.quick-access-bar,
+.nav-bar,
+.header-cta {
+  display: none !important;
+}
+
+.site-dropdown-nav {
+  position: sticky;
+  top: 84px;
+  z-index: 1190;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 12px;
+}
+
+.dropdown-nav-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.site-page-select {
+  min-height: 44px;
+  width: min(92vw, 520px);
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+main.container {
+  padding-top: 10px !important;
+}
+
+@media (max-width: 900px) {
+  .site-dropdown-nav {
+    top: 76px;
+    padding: 8px 10px;
+  }
+
+  .dropdown-nav-label {
+    display: none;
+  }
+}
