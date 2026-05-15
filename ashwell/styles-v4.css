@@ -2685,3 +2685,75 @@ main.container {
     display: none;
   }
 }
+
+/* =========================================
+   WHITE SURFACE + BLACK TEXT HARD OVERRIDES
+   ========================================= */
+
+body,
+.site-header,
+.site-dropdown-nav,
+.site-footer,
+.card,
+.modern-section,
+.quick-links,
+.event-card,
+.service-card,
+.link-card,
+.stat,
+.calendar,
+.bank-details,
+.form-input,
+.form-textarea,
+.lightbox .card,
+.featured-event-hero,
+.donation-card {
+  background: #ffffff !important;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+li,
+a,
+span,
+label,
+.section-title,
+.hero-title,
+.hero-sub,
+.event-title,
+.event-meta,
+.event-meta span,
+.link-card-title,
+.link-card-desc,
+.form-label,
+.form-status,
+.calendar,
+.calendar * {
+  color: #000000 !important;
+}
+
+/* Make section depths visible with subtle borders */
+.card,
+.modern-section,
+.quick-links,
+.event-card,
+.service-card,
+.link-card,
+.stat,
+.calendar,
+.bank-details,
+.featured-event-hero,
+.donation-card,
+.site-dropdown-nav,
+.site-header,
+.site-footer {
+  border: 1px solid #d1d5db !important;
+  box-shadow: none !important;
+}
+
+.weekday-row span,
+.calendar-cell,
+.calendar-cell .day-num {
+  color: #000000 !important;
+}
