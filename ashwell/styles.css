@@ -223,7 +223,14 @@ main.container {
   font-size: 1.5rem;
   color: var(--text);
   cursor: pointer;
-  padding: 8px;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 @media(min-width: 900px) {
   .menu-toggle { display: none; }
@@ -1803,5 +1810,677 @@ p {
   
   .event-date-day {
     font-size: 1.4rem;
+  }
+}
+
+/* =========================================
+   ENHANCED MOBILE EXPERIENCE (max-width: 600px)
+   Comprehensive small-screen optimizations
+   ========================================= */
+@media (max-width: 600px) {
+  /* Header - Compact for mobile */
+  .site-header {
+    height: 80px;
+    padding: 12px 0;
+  }
+  .logo {
+    height: 56px;
+  }
+  .logo-title {
+    gap: 12px;
+  }
+  .logo-title h1 {
+    font-size: 1.25rem;
+  }
+  .logo-title .sub {
+    display: none;
+  }
+
+  /* Mobile nav positioning */
+  .nav-bar {
+    top: 80px;
+    padding: 16px;
+  }
+  .nav-bar a {
+    padding: 14px 16px;
+    font-size: 1rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Menu toggle - larger touch target */
+  .menu-toggle {
+    font-size: 1.75rem;
+    padding: 0;
+    min-width: 48px;
+    min-height: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+  }
+
+  /* Quick access bar - full width scroll */
+  .quick-access-bar {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px 10px;
+    gap: 5px;
+    border-radius: 0;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+  .quick-access-bar .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    min-height: 36px;
+  }
+
+  /* Hero section - reduced height */
+  .photo-hero {
+    min-height: 45vh;
+    max-height: 50vh;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+  }
+  .hero-slideshow {
+    max-height: 50vh;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .hero-slideshow .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    max-height: 50vh;
+  }
+  .hero-content {
+    padding: 12px 16px;
+    padding-top: 40px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+  .hero-sub {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .hero-bottom {
+    gap: 10px;
+  }
+  .chips {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .chip {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+  .hero-actions {
+    gap: 8px;
+  }
+  .hero-actions .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+
+  /* Section titles - smaller */
+  .section-title {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 10px;
+  }
+  .modern-section {
+    padding: 16px 10px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* Cards - tighter padding */
+  .card, .link-card, .service-card, .stat, .bank-details {
+    padding: 14px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+  }
+  .link-card {
+    min-height: auto;
+  }
+  .link-card-img {
+    height: 160px;
+  }
+  .link-card-content {
+    padding: 12px;
+  }
+
+  /* Stats grid - single column, stacked */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .stat {
+    padding: 16px 14px;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+  }
+  .stat-value {
+    font-size: 1.35rem;
+  }
+  .stat-title {
+    font-size: 0.8rem;
+  }
+
+  /* Board grid - single column */
+  .board-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .board-card {
+    padding: 14px;
+    gap: 8px;
+  }
+  .board-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  .board-name {
+    font-size: 1rem;
+  }
+  .board-role {
+    font-size: 0.8rem;
+  }
+
+  /* Two column layouts - stack */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Grid 3 - single column */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Event cards - stack vertically */
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .event-date-badge {
+    min-width: 60px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+  .event-date-day {
+    font-size: 1.3rem;
+  }
+  .event-date-month {
+    font-size: 0.75rem;
+  }
+  .event-title {
+    font-size: 1.1rem;
+  }
+  .event-meta {
+    font-size: 0.8rem;
+  }
+
+  /* Forms - full width inputs, larger touch targets */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .form-input, .form-textarea, .form-select {
+    padding: 14px 16px;
+    font-size: 16px; /* Prevents iOS zoom */
+    min-height: 48px;
+  }
+  .form-textarea {
+    min-height: 100px;
+  }
+
+  /* Buttons - larger touch targets */
+  .btn {
+    padding: 14px 24px;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+  .btn-sm {
+    padding: 10px 16px;
+    min-height: 40px;
+  }
+
+  /* Bank details - compact */
+  .bank-details {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  .account-number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 16px 0;
+  }
+  .bank-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Copy button - larger touch target */
+  .copy-btn {
+    padding: 10px 18px;
+    min-height: 44px;
+  }
+
+  /* Footer - compact */
+  .site-footer {
+    padding: 20px 10px 12px;
+    margin-top: 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .footer-col p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-links li {
+    margin-bottom: 6px;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding-top: 12px;
+  }
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  /* Gallery - single column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gallery-item {
+    border-radius: 12px;
+  }
+
+  /* Lightbox - larger controls */
+  .lightbox-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+  .lightbox-counter {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  /* Calendar - compact cells */
+  .calendar-cell {
+    min-height: 44px;
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  /* Tab buttons - scrollable */
+  .tab-buttons {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .tab-buttons::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    min-height: 44px;
+  }
+
+  /* Timeline - adjusted for small screens */
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-item {
+    padding-left: 48px;
+  }
+  .timeline-dot {
+    left: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Service cards compact */
+  .service-card {
+    padding: 14px;
+  }
+  .service-card img.service-img {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .service-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  .service-content ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .service-content li {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  /* Partners section compact */
+  .enhanced-sponsor-section {
+    padding: 16px 10px;
+  }
+  .sponsors-header {
+    margin-bottom: 16px;
+  }
+  .sponsors-header h2 {
+    font-size: 1.2rem;
+  }
+  .sponsors-header p {
+    font-size: 0.85rem;
+  }
+  .logo-loop-container {
+    height: 60px;
+  }
+  .sponsor-logo {
+    height: 50px;
+    margin: 0 10px;
+  }
+
+  /* Donation card compact */
+  .donation-card {
+    padding: 16px 12px;
+  }
+  .donation-card .section-title {
+    font-size: 1.3rem;
+  }
+  .donation-card p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .impact-breakdown {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+  .impact-item {
+    gap: 6px;
+  }
+  .impact-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+  .impact-label {
+    font-size: 0.75rem;
+  }
+
+  /* Goods donation list compact */
+  .goods-donation > div > div {
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  .goods-donation strong {
+    font-size: 1rem;
+  }
+  .goods-donation span {
+    font-size: 0.85rem;
+  }
+
+  /* Header CTA button - hidden on mobile, moved to hero - cache-bust v2 */
+  .header-cta {
+    display: none !important;
+  }
+
+  /* Featured event hero compact */
+  .featured-event-hero {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+  }
+  .featured-event-hero .hero-title {
+    font-size: 1.5rem;
+  }
+  .featured-event-hero .hero-sub {
+    font-size: 0.9rem;
+  }
+  .countdown-grid {
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .countdown-item {
+    padding: 10px;
+    min-width: 60px;
+  }
+  .countdown-val {
+    font-size: 1.5rem;
+  }
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  /* Calendar compact */
+  .calendar-header {
+    padding: 10px;
+  }
+  .calendar-grid {
+    gap: 2px;
+  }
+  .weekday-row span {
+    font-size: 0.7rem;
+    padding: 4px;
+  }
+
+  /* RSVP modal compact */
+  #rsvp-modal .card {
+    padding: 20px 16px;
+    max-width: 95%;
+  }
+  #rsvp-modal h3 {
+    font-size: 1.2rem;
+  }
+  #rsvp-modal .form-group {
+    margin-bottom: 12px;
+  }
+  #rsvp-modal .form-label {
+    font-size: 0.9rem;
+  }
+  #rsvp-modal .form-input {
+    padding: 10px 12px;
+    min-height: 40px;
+  }
+
+  /* Newsletter page compact */
+  .hero-small {
+    padding: 24px 16px;
+    margin-bottom: 20px;
+  }
+  .hero-small .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-small .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  /* Card icon compact */
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  .role-chip {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Form status messages */
+  .form-status {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  /* Lightbox close button */
+  .lightbox-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Reduce paragraph spacing globally */
+  p {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Compact spacing between sections */
+  .card + .card,
+  .modern-section + .modern-section {
+    margin-top: 12px;
+  }
+
+  /* Mission section compact */
+  .mission-bg p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  /* Gallery filters compact */
+  #gallery-filters {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  #gallery-filters .chip {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Reduce motion for performance */
+  .card:hover, .link-card:hover, .service-card:hover, .stat:hover {
+    transform: none;
+  }
+
+  /* Toast notifications - full width */
+  .toast {
+    left: 10px;
+    right: 10px;
+    max-width: none;
+    transform: translateX(0);
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL SCREENS (max-width: 400px)
+   ========================================= */
+@media (max-width: 400px) {
+  .site-header {
+    height: 72px;
+    padding: 8px 0;
+  }
+  .logo {
+    height: 48px;
+  }
+  .logo-title h1 {
+    font-size: 1.1rem;
+  }
+  .nav-bar {
+    top: 72px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.35rem;
+  }
+  .photo-hero {
+    min-height: 40vh;
+  }
+  .quick-access-bar .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================
+   TOUCH DEVICE ENHANCEMENTS
+   ========================================= */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets globally */
+  a, button, .btn, .nav-bar a, .menu-toggle, .copy-btn, .tab-btn, .lightbox-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Remove hover effects that don't work well on touch */
+  .card:hover, .link-card:hover, .service-card:hover, .stat:hover, .event-card:hover {
+    transform: none;
+  }
+  /* Add active states for touch feedback */
+  .card:active, .link-card:active, .btn:active, .nav-bar a:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* =========================================
+   SAFARI / IOS SPECIFIC FIXES
+   ========================================= */
+@supports (-webkit-touch-callout: none) {
+  /* Prevent iOS callout menu on images */
+  img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
+  /* Fix iOS 100vh issue */
+  .photo-hero {
+    min-height: -webkit-fill-available;
+  }
+  /* Smooth scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
   }
 }
