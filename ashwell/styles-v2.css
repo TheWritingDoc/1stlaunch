@@ -1813,6 +1813,11 @@ p {
   }
 }
 
+/* Header CTA hidden globally; Donate remains in hero actions */
+.header-cta {
+  display: none !important;
+}
+
 /* =========================================
    ENHANCED MOBILE EXPERIENCE (max-width: 600px)
    Comprehensive small-screen optimizations
