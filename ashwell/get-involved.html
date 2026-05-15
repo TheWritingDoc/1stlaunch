@@ -1,6 +1,6 @@
 <!doctype html><html lang='en'><head>
 <meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>NBPAM Service Centre</title><link rel='stylesheet' href='styles-v3.css'></head>
+<title>NBPAM Service Centre</title><link rel='stylesheet' href='styles-v4.css'></head>
 <body>
 <header class='site-header'>
 <div class='container header-flex'>
@@ -263,4 +263,13 @@
 </footer>
 <script src="ui.js"></script>
 <script src="splash-cursor.js"></script>
+<script>
+/* CACHE_CLEANUP_V1 */
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+}
+if (window.caches && caches.keys) {
+  caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k))));
+}
+</script>
 </body></html>
