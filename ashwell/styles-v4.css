@@ -2757,3 +2757,48 @@ label,
 .calendar-cell .day-num {
   color: #000000 !important;
 }
+
+/* Final contrast and border polish */
+#gallery-filters .chip {
+  color: #111111 !important;
+  border: 1px solid #9ca3af !important;
+  background: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+#gallery-filters .chip.active {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+input,
+textarea,
+select {
+  border: 1px solid #9ca3af !important;
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #111111 !important;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08) !important;
+}
+
+a {
+  color: #000000 !important;
+  text-decoration-color: #000000 !important;
+}
+
+.btn,
+button {
+  border: 1px solid #111111 !important;
+}
