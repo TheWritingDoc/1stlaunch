@@ -1,14 +1,23 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
 		<title>Precision Code | Custom Software &amp; Web Development</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Precision Code builds custom websites, software and mobile apps for South African businesses. Affordable, reliable, built to grow with you." />
+		<meta name="theme-color" content="#1a1a2e" />
+		<meta property="og:title" content="Precision Code | Custom Software &amp; Web Development" />
+		<meta property="og:description" content="Custom websites, software and mobile apps for South African businesses — on time, on budget, built to scale." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="images/cover.png" />
+		<link rel="icon" type="image/png" href="images/default.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			/* Hero tagline */
 			.hero-tagline { font-size: 1.1em; opacity: 0.85; margin-bottom: 0.5em; letter-spacing: 0.05em; text-transform: uppercase; }
+			/* Hero headline: readable on gradient background */
+			#top header h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+			#top header h1 strong { color: #fff; }
 			/* CTA button override */
 			.button.alt { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 1em; }
 			.button.alt:hover { background: rgba(255,255,255,0.15); }
@@ -24,6 +33,54 @@
 			/* Section padding */
 			#portfolio { background: #1a1a2e; }
 			#testimonials { background: #16213e; }
+
+			/* Portfolio project cards */
+			#portfolio .box.style2 {
+				background: rgba(255,255,255,0.05);
+				border-radius: 10px;
+				padding: 1.5em;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			#portfolio .box.style2:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+			}
+			#portfolio .box .image.featured {
+				position: static !important;
+				left: auto !important;
+				top: auto !important;
+				margin: 0 0 1em 0 !important;
+				width: 100% !important;
+				display: block;
+				border: 3px solid rgba(255,255,255,0.2);
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			#portfolio a.image.featured:hover { border-color: #4a90d9; }
+			#portfolio .box .image.featured img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				object-position: top;
+				display: block;
+			}
+			#portfolio .box.style2 h3 { margin-bottom: 0.5em; }
+			#portfolio .box.style2 p { flex-grow: 1; }
+			/* Tech tags */
+			.tech-tags { margin: 0 0 1em 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; }
+			.tech-tags li {
+				background: rgba(74,144,217,0.2);
+				border: 1px solid rgba(74,144,217,0.5);
+				border-radius: 999px;
+				padding: 0.15em 0.8em;
+				font-size: 0.75em;
+				letter-spacing: 0.03em;
+			}
+			.demo-note { font-size: 0.85em; opacity: 0.7; font-style: italic; }
 			/* Footer copyright */
 			.footer-copy { text-align: center; padding: 2em 0 1em; opacity: 0.5; font-size: 0.85em; }
 
@@ -65,44 +122,6 @@
 				}
 				/* Hero buttons stack */
 				#top .button.alt { margin-left: 0; margin-top: 0.75em; }
-			/* Portfolio images fix */
-			.box .image.featured {
-				position: static !important;
-				left: auto !important;
-				top: auto !important;
-				margin: 0 0 1em 0 !important;
-				width: 100% !important;
-			}
-			.box .image.featured img {
-				width: 100%;
-				height: auto;
-				display: block;
-			}
-			/* Portfolio images: same size + borders */
-			#portfolio .box .image.featured {
-				position: static !important;
-				left: auto !important;
-				top: auto !important;
-				margin: 0 0 1em 0 !important;
-				width: 100% !important;
-				display: block;
-			}
-			#portfolio .box .image.featured a {
-				display: block;
-				border: 3px solid rgba(255,255,255,0.2);
-				border-radius: 8px;
-				overflow: hidden;
-			}
-			#portfolio .box .image.featured a:hover {
-				border-color: #4a90d9;
-			}
-			#portfolio .box .image.featured a img {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-				display: block;
-				border-radius: 0;
-			}
 				/* Testimonials stack */
 				.testimonial-grid { flex-direction: column; align-items: center; }
 				.testimonial-card { max-width: 100%; width: 100%; }
@@ -188,19 +207,32 @@
 					<h2>Recent Work</h2>
 					<p>A selection of projects we&rsquo;ve delivered for our clients.</p>
 				</header>
-				<div class="row">
+				<div class="row gtr-uniform">
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<a href="https://nonrectangularly-hyperaesthetic-dewey.ngrok-free.dev" class="image featured" target="_blank"><img src="images/gshop-screenshot.png" alt="GShop App" /></a>
-							<h3><a href="https://nonrectangularly-hyperaesthetic-dewey.ngrok-free.dev" target="_blank">GShop &mdash; Moneyless Skill Exchange</a></h3>
-							<p>A gig economy platform where unemployed and underemployed people trade skills without money. Built with React, Node.js, Express, and MongoDB. Features GPS-based matching, credit system, photo uploads, and escrow payments.</p>
+							<a href="images/gshop-screenshot.png" class="image featured" target="_blank"><img src="images/gshop-screenshot.png" alt="G-Shop skill exchange platform screenshot" /></a>
+							<h3>G-Shop &mdash; Moneyless Skill Exchange</h3>
+							<ul class="tech-tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+							<p>A gig economy platform where unemployed and underemployed people trade skills without money. Features GPS-based matching, a credit system, photo uploads, and escrow payments.</p>
+							<p class="demo-note">Live demo available on request &mdash; <a href="#contact" class="scrolly">ask us for a walkthrough</a>.</p>
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<a href="ashwell/index.html" class="image featured"><img src="images/ashwell-screenshot.png" alt="Ashwell / NBPAM Service Centre" /></a>
+							<a href="ashwell/index.html" class="image featured"><img src="images/ashwell-screenshot.png" alt="NBPAM Service Centre website screenshot" /></a>
 							<h3><a href="ashwell/index.html">NBPAM Service Centre &mdash; Ashwell</a></h3>
+							<ul class="tech-tags"><li>HTML/CSS</li><li>JavaScript</li><li>Responsive</li><li>Accessible</li></ul>
 							<p>Community nonprofit website with event management, donation portal, newsletter signup, and volunteer coordination. Built with modern responsive design and accessibility in mind.</p>
+							<p class="demo-note"><a href="ashwell/index.html">View the live site &rarr;</a></p>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<a href="#contact" class="image featured scrolly"><img src="images/cover.png" alt="Precision Code — your project here" /></a>
+							<h3>Your Project Could Be Next</h3>
+							<ul class="tech-tags"><li>Web</li><li>Software</li><li>Mobile</li></ul>
+							<p>Whether it&rsquo;s a website, a custom system, or a mobile app &mdash; we scope it with you, quote it upfront, and deliver it on time.</p>
+							<p class="demo-note"><a href="#contact" class="scrolly">Start the conversation &rarr;</a></p>
 						</article>
 					</div>
 				</div>
@@ -270,10 +302,10 @@
 										<li><a href="https://twitter.com/code_preci3893" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="https://web.facebook.com/profile.php?id=61568138102892" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="https://www.linkedin.com/in/adrian-kettledas" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/PrecisionCodeSA" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://github.com/TheWritingDoc" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									</ul>
 									<hr />
-									<p class="footer-copy">&copy; 2025 Precision Code. All rights reserved.</p>
+									<p class="footer-copy">&copy; 2026 Precision Code. All rights reserved.</p>
 								</div>
 					</div>
 				</div>
