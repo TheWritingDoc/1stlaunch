@@ -1,292 +1,224 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Precision Code | Custom Software &amp; Web Development</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Precision Code builds custom websites, software and mobile apps for South African businesses. Affordable, reliable, built to grow with you." />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Hero tagline */
-			.hero-tagline { font-size: 1.1em; opacity: 0.85; margin-bottom: 0.5em; letter-spacing: 0.05em; text-transform: uppercase; }
-			/* CTA button override */
-			.button.alt { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 1em; }
-			.button.alt:hover { background: rgba(255,255,255,0.15); }
-			/* Testimonial cards */
-			.testimonial-grid { display: flex; flex-wrap: wrap; gap: 1.5em; justify-content: center; margin-top: 2em; }
-			.testimonial-card { background: rgba(255,255,255,0.07); border-radius: 10px; padding: 1.8em 2em; flex: 1 1 280px; max-width: 340px; text-align: left; }
-			.testimonial-card blockquote { margin: 0 0 1em 0; font-style: italic; line-height: 1.7; }
-			.testimonial-card cite { font-weight: bold; font-size: 0.9em; opacity: 0.8; }
-			/* Star rating */
-			.stars { color: #f4c430; font-size: 1.1em; margin-bottom: 0.5em; }
-			/* Logo sizing */
-			#top .image.fit img { max-width: 260px; margin: 0 auto; display: block; }
-			/* Section padding */
-			#portfolio { background: #1a1a2e; }
-			#testimonials { background: #16213e; }
-			/* Footer copyright */
-			.footer-copy { text-align: center; padding: 2em 0 1em; opacity: 0.5; font-size: 0.85em; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precision Code (Pty) Ltd — Engineering Tomorrow's Workflows</title>
+  <meta name="description" content="Precision Code builds websites and web apps for organisations, venues and schools. Browse selected public projects.">
+  <meta name="theme-color" content="#060b24">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-			/* Mobile nav hamburger */
-			.nav-toggle {
-				display: none;
-				background: none;
-				border: none;
-				color: #fff;
-				font-size: 1.5em;
-				cursor: pointer;
-				padding: 0 0.75em;
-				line-height: 44px;
-			}
-			.nav-menu {
-				display: flex;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-			@media screen and (max-width: 736px) {
-				.nav-toggle { display: block; }
-				.nav-menu {
-					display: none;
-					flex-direction: column;
-					position: absolute;
-					top: 44px;
-					left: 0;
-					width: 100%;
-					background: rgba(30,30,46,0.98);
-					padding: 0.5em 0;
-				}
-				.nav-menu.active { display: flex; }
-				.nav-menu li { width: 100%; text-align: center; }
-				.nav-menu li a {
-					display: block;
-					padding: 0.75em 0;
-					width: 100%;
-				}
-				/* Hero buttons stack */
-				#top .button.alt { margin-left: 0; margin-top: 0.75em; }
-			/* Portfolio images fix */
-			.box .image.featured {
-				position: static !important;
-				left: auto !important;
-				top: auto !important;
-				margin: 0 0 1em 0 !important;
-				width: 100% !important;
-			}
-			.box .image.featured img {
-				width: 100%;
-				height: auto;
-				display: block;
-			}
-			/* Portfolio images: same size + borders */
-			#portfolio .box .image.featured {
-				position: static !important;
-				left: auto !important;
-				top: auto !important;
-				margin: 0 0 1em 0 !important;
-				width: 100% !important;
-				display: block;
-			}
-			#portfolio .box .image.featured a {
-				display: block;
-				border: 3px solid rgba(255,255,255,0.2);
-				border-radius: 8px;
-				overflow: hidden;
-			}
-			#portfolio .box .image.featured a:hover {
-				border-color: #4a90d9;
-			}
-			#portfolio .box .image.featured a img {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-				display: block;
-				border-radius: 0;
-			}
-				/* Testimonials stack */
-				.testimonial-grid { flex-direction: column; align-items: center; }
-				.testimonial-card { max-width: 100%; width: 100%; }
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+  <header class="site-header" id="top">
+    <div class="wrap nav-bar">
+      <a class="brand" href="#top" aria-label="Precision Code (Pty) Ltd — home">
+        <span class="brand-crop"><img src="logo.png" alt="Precision Code (Pty) Ltd — Engineering Tomorrow's Workflows"></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn-small" href="#contact">Start a project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<div class="container" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-				<button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')" aria-label="Toggle navigation">&#9776;</button>
-				<ul class="nav-menu container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#work">Services</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#testimonials">Clients</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Web design &amp; development</p>
+          <h1>Engineering <span class="accent">tomorrow's workflows</span>, one precise build at a time.</h1>
+          <p class="lead">Precision Code is a small software company that designs and builds websites and web applications for nonprofits, local businesses and schools — clear, fast and built around how your people actually work.</p>
+          <div class="cta-row">
+            <a class="btn" href="#projects">See selected projects</a>
+            <a class="btn btn-ghost" href="#contact">Talk to us</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-dots"><i></i><i></i><i></i></div>
+            <pre><code><span class="c-k">const</span> build = {
+  <span class="c-p">plan</span>:    <span class="c-s">"understand the workflow"</span>,
+  <span class="c-p">design</span>:  <span class="c-s">"clear, accessible, fast"</span>,
+  <span class="c-p">ship</span>:    <span class="c-s">"on the web, for everyone"</span>
+};</code></pre>
+          </div>
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Hero -->
-		<article id="top" class="wrapper style1">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-5-large col-12-medium">
-						<span class="image fit"><img src="images/default.png" alt="Precision Code Logo" /></span>
-					</div>
-					<div class="col-8 col-7-large col-12-medium">
-						<header>
-							<p class="hero-tagline">South African Software Engineering</p>
-							<h1>Build Smarter.<br /><strong>Grow Faster.</strong></h1>
-						</header>
-						<p>Your business deserves a digital presence that actually works. We build custom websites, software solutions and mobile apps tailored for South African businesses &mdash; on time, on budget, and built to scale.</p>
-						<a href="#contact" class="button large scrolly">Get a Free Quote</a>
-						<a href="#work" class="button large alt scrolly">See What We Do</a>
-					</div>
-				</div>
-			</div>
-		</article>
+    <section class="section" id="services" aria-labelledby="services-h">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2 id="services-h">Services</h2>
+          <p class="section-sub">Practical web work, from first sketch to a live site.</p>
+        </header>
+        <div class="grid grid-3">
+          <article class="card service">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+            <h3>Website design &amp; build</h3>
+            <p>Responsive, accessible sites for organisations, venues and small businesses, with clear structure and calls to action.</p>
+          </article>
+          <article class="card service">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span>
+            <h3>Web applications</h3>
+            <p>Custom portals and tools — registration, sign-in and data-driven workflows — built to replace spreadsheets and manual admin.</p>
+          </article>
+          <article class="card service">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg></span>
+            <h3>Workflow automation</h3>
+            <p>Mapping repetitive processes and turning them into simpler digital steps that your team can maintain.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-		<!-- Services -->
-		<article id="work" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>What We Do</h2>
-					<p>Practical solutions that solve real problems for your business.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="image featured"><img src="images/custom .webp" alt="Custom Web Development" /></span>
-							<h3>Custom Web Development</h3>
-							<p>From landing pages to full e-commerce platforms &mdash; we build websites that look great, load fast, and turn visitors into customers. No cookie-cutter templates.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="image featured"><img src="images/software icon.webp" alt="Software Solutions" /></span>
-							<h3>Software Solutions</h3>
-							<p>Tired of working around software that doesn&rsquo;t fit? We build bespoke systems &mdash; inventory management, booking platforms, dashboards &mdash; tailored exactly to how your business operates.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="image featured"><img src="images/mobile app.webp" alt="Mobile App Development" /></span>
-							<h3>Mobile App Development</h3>
-							<p>Put your business in your customers&rsquo; pockets. We develop Android and iOS apps that are intuitive, reliable, and built around your users&rsquo; real needs.</p>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<a href="#contact" class="button large scrolly">Start Your Project</a>
-				</footer>
-			</div>
-		</article>
+    <section class="section section-alt" id="projects" aria-labelledby="projects-h">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-h">Project showcase</h2>
+          <p class="section-sub">Selected public projects. Each opens in a new tab; some areas require a login or are for adults only, as noted.</p>
+        </header>
 
-		<!-- Portfolio -->
-		<article id="portfolio" class="wrapper style3">
-			<div class="container">
-				<header>
-					<h2>Recent Work</h2>
-					<p>A selection of projects we&rsquo;ve delivered for our clients.</p>
-				</header>
-				<div class="row">
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://nonrectangularly-hyperaesthetic-dewey.ngrok-free.dev" class="image featured" target="_blank"><img src="images/gshop-screenshot.png" alt="GShop App" /></a>
-							<h3><a href="https://nonrectangularly-hyperaesthetic-dewey.ngrok-free.dev" target="_blank">GShop &mdash; Moneyless Skill Exchange</a></h3>
-							<p>A gig economy platform where unemployed and underemployed people trade skills without money. Built with React, Node.js, Express, and MongoDB. Features GPS-based matching, credit system, photo uploads, and escrow payments.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="ashwell/index.html" class="image featured"><img src="images/ashwell-screenshot.png" alt="Ashwell / NBPAM Service Centre" /></a>
-							<h3><a href="ashwell/index.html">NBPAM Service Centre &mdash; Ashwell</a></h3>
-							<p>Community nonprofit website with event management, donation portal, newsletter signup, and volunteer coordination. Built with modern responsive design and accessibility in mind.</p>
-						</article>
-					</div>
-				</div>
-				<footer>
-					<p>Have a project in mind?</p>
-					<a href="#contact" class="button large scrolly">Let&rsquo;s Talk</a>
-				</footer>
-			</div>
-		</article>
+        <div class="grid grid-2">
+          <article class="card project">
+            <div class="thumb thumb-a" aria-hidden="true"><span>NB</span></div>
+            <div class="card-body">
+              <ul class="tags"><li>Nonprofit</li><li>Website</li></ul>
+              <h3>NBPAM</h3>
+              <p>A public website for a nonprofit organisation, presenting who it is and how people can get involved.</p>
+              <a class="link" href="https://nbpam-humie.vercel.app/" target="_blank" rel="noopener noreferrer">Visit nbpam-humie.vercel.app <span class="sr">(opens in a new tab)</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
 
-		<!-- Testimonials -->
-		<article id="testimonials" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>What Our Clients Say</h2>
-					<p>Real results for real South African businesses.</p>
-				</header>
-				<div class="testimonial-grid">
-					<div class="testimonial-card">
-						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-						<blockquote>"Precision Code built our online store from scratch. The process was smooth, the communication was excellent, and the results exceeded our expectations. Our sales doubled in the first month."</blockquote>
-						<cite>&mdash; Thabo M., Retail Business Owner, Johannesburg</cite>
-					</div>
-					<div class="testimonial-card">
-						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-						<blockquote>"Finally a developer who actually delivers on time and explains things in plain language. They built us a custom booking system that saved us hours every single week. Highly recommended."</blockquote>
-						<cite>&mdash; Sarah K., Clinic Manager, Cape Town</cite>
-					</div>
-					<div class="testimonial-card">
-						<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-						<blockquote>"Professional, affordable, and they really understood what our business needed. The mobile app they built for us has been a game changer for our field team."</blockquote>
-						<cite>&mdash; Ruan V., Operations Director, Port Elizabeth</cite>
-					</div>
-				</div>
-			</div>
-		</article>
+          <article class="card project">
+            <div class="thumb thumb-b" aria-hidden="true"><span>CL</span></div>
+            <div class="card-body">
+              <ul class="tags"><li>Local venues</li><li class="tag-warn">Adults 18+ only</li></ul>
+              <h3>Chommie Links</h3>
+              <p>A local venue discovery site. Intended for adults aged 18 and over.</p>
+              <a class="link" href="https://www.chommielinks.com/" target="_blank" rel="noopener noreferrer">Visit chommielinks.com <span class="sr">(adults 18+ only, opens in a new tab)</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
 
-		<!-- Contact -->
-		<article id="contact" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Get in Touch</h2>
-					<p>Tell us about your project &mdash; we&rsquo;ll get back to you within 24 hours.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-8 col-12-small">
-						<form method="post" action="https://formspree.io/f/xnjbdkpy">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" placeholder="Your Name" required />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" placeholder="Your Email" required />
-								</div>
-								<div class="col-12">
-									<textarea name="message" id="message" placeholder="Tell us about your project..." rows="5"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions special">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-								<div class="col-12" style="margin-top: 1.5em;">
-									<ul class="social">
-										<li><a href="https://twitter.com/code_preci3893" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://web.facebook.com/profile.php?id=61568138102892" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.linkedin.com/in/adrian-kettledas" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/PrecisionCodeSA" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-									<hr />
-									<p class="footer-copy">&copy; 2025 Precision Code. All rights reserved.</p>
-								</div>
-					</div>
-				</div>
-			</div>
-		</article>
+          <article class="card project">
+            <div class="thumb thumb-c" aria-hidden="true"><span>RP</span></div>
+            <div class="card-body">
+              <ul class="tags"><li>Education</li><li>Web app</li><li class="tag-note">Login required</li></ul>
+              <h3>Rugby Portal</h3>
+              <p>A school rugby registration portal. The landing page is public; the registration area requires a login.</p>
+              <a class="link" href="https://rugby-portal.vercel.app/" target="_blank" rel="noopener noreferrer">Visit rugby-portal.vercel.app <span class="sr">(opens in a new tab)</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+          <article class="card project">
+            <div class="thumb thumb-d" aria-hidden="true"><span>RA</span></div>
+            <div class="card-body">
+              <ul class="tags"><li>Sport</li><li>Web app</li><li class="tag-note">Login required</li></ul>
+              <h3>Rugby Assistant</h3>
+              <p>A companion app for school rugby. The landing page is public; the app itself requires a login.</p>
+              <a class="link" href="https://rugby-assistant-app.vercel.app/" target="_blank" rel="noopener noreferrer">Visit rugby-assistant-app.vercel.app <span class="sr">(opens in a new tab)</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-	</body>
+    <section class="section" id="community" aria-labelledby="community-h">
+      <div class="wrap">
+        <div class="impact single">
+          <div>
+            <p class="eyebrow">Community impact</p>
+            <h2 id="community-h">Building for people and local organisations</h2>
+            <p>Much of our work supports nonprofits, local venues and school communities. We care about sites that are easy to use, easy to read and easy to keep up to date.</p>
+          </div>        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="insights" aria-labelledby="insights-h">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Insights</p>
+          <h2 id="insights-h">Practical software &amp; AI notes <span class="soon">Coming soon</span></h2>
+          <p class="section-sub">We plan to share short, practical write-ups. Nothing is published yet; these are the topics we intend to cover.</p>
+        </header>
+        <ul class="grid grid-3 topics">
+          <li class="card topic"><h3>Choosing between a website and a web app</h3><p>How to decide what your organisation actually needs.</p></li>
+          <li class="card topic"><h3>Where AI helps in everyday workflows</h3><p>Realistic uses for drafting, sorting and summarising, and where people should stay in charge.</p></li>
+          <li class="card topic"><h3>Replacing spreadsheets with simple tools</h3><p>Signs it is time to move a manual process into software.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-h">Tell us what you need</h2>
+          <p class="section-sub left">Send a short message about your project and we'll reply by email.</p>
+          <p class="section-sub left"><a class="link" href="mailto:precisioncode.sa@gmail.com">Email precisioncode.sa@gmail.com</a></p>
+        </div>
+        <form class="card form" action="https://formspree.io/f/xnjbdkpy" method="POST">
+          <div class="field">
+            <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <span class="brand-crop small"><img src="logo.png" alt="Precision Code (Pty) Ltd"></span>
+        <p class="foot-note">Engineering Tomorrow's Workflows.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Social media">
+        <ul>
+          <li><a href="https://twitter.com/code_preci3893" target="_blank" rel="noopener noreferrer">Twitter<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://web.facebook.com/profile.php?id=61568138102892" target="_blank" rel="noopener noreferrer">Facebook<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/adrian-kettledas" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://github.com/TheWritingDoc" target="_blank" rel="noopener noreferrer">GitHub<span class="sr"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap legal">© <span id="year">2026</span> Precision Code (Pty) Ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
